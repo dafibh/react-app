@@ -73,5 +73,9 @@ export default styled(Drawer)(({ theme, ownerState }) => {
 
       ...(miniSidenav ? drawerCloseStyles() : drawerOpenStyles()),
     },
+
+    "& .MuiDrawer-paper::-webkit-scrollbar": {
+      display: "none",
+    },
   };
 });
