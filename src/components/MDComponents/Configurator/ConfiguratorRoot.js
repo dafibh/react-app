@@ -41,5 +41,9 @@ export default styled(Drawer)(({ theme, ownerState }) => {
       overflowY: "auto",
       ...(openConfigurator ? drawerOpenStyles() : drawerCloseStyles()),
     },
+
+    "& .MuiDrawer-paper::-webkit-scrollbar": {
+      display: "none",
+    },
   };
 });
