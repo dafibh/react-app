@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -33,7 +33,25 @@ import horizontalBarChartData from "layouts/dashboards/sales/data/horizontalBarC
 import salesTableData from "layouts/dashboards/sales/data/salesTableData";
 import dataTableData from "layouts/dashboards/sales/data/dataTableData";
 
+// API
+import { getTest } from "util/APIHelper";
+
 function Sales() {
+  const [revenueData, setRevenueData] = useState({});
+
+  useEffect(() => {
+    const runAsync = async () => {
+      const response = await getTest();
+      const { data } = response;
+      if (data.status === 200) {
+        setRevenueData(data.message);
+      } else {
+        setRevenueData(defaultLineChartData);
+      }
+    };
+    runAsync();
+  }, []);
+
   // DefaultStatisticsCard state for the dropdown value
   const [salesDropdownValue, setSalesDropdownValue] = useState("6 May - 7 May");
   const [customersDropdownValue, setCustomersDropdownValue] = useState("6 May - 7 May");
@@ -162,7 +180,7 @@ function Sales() {
                     </MDBox>
                   </MDBox>
                 }
-                chart={defaultLineChartData}
+                chart={revenueData}
               />
             </Grid>
           </Grid>
