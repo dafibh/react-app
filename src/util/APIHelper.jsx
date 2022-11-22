@@ -8,7 +8,7 @@ const instance = axios.create({
 export const getTest = async () => instance.get("");
 
 export const register = async (name, email, password, phone, agency, role) =>
-  instance.post("'users/register'", { name, email, password, phone, agency, role });
+  instance.post("users/register", { name, email, password, phone, agency, role });
 
 export const confirmRegister = async (id) => instance.post(`users/confirm/${id}`);
 
