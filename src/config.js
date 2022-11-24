@@ -1,5 +1,5 @@
 const config = {
-  //https://us-central1-dafi-mockserver.cloudfunctions.net/server
+  // https://us-central1-dafi-mockserver.cloudfunctions.net/server
   WS_BASE_URL: "https://reactapi-placeholder.glitch.me",
   DOMAIN_NAME: "http://localhost:3000",
 };
