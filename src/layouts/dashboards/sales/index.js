@@ -28,26 +28,21 @@ import DataTable from "components/MDComponents/Tables/DataTable";
 import ChannelsChart from "layouts/dashboards/sales/components/ChannelsChart";
 
 // Data
-import defaultLineChartData from "layouts/dashboards/sales/data/defaultLineChartData";
+// import defaultLineChartData from "layouts/dashboards/sales/data/defaultLineChartData";
 import horizontalBarChartData from "layouts/dashboards/sales/data/horizontalBarChartData";
 import salesTableData from "layouts/dashboards/sales/data/salesTableData";
 import dataTableData from "layouts/dashboards/sales/data/dataTableData";
 
 // API
-import { getTest } from "util/APIHelper";
+import { getSalesRevenue } from "util/APIHelper";
 
 function Sales() {
   const [revenueData, setRevenueData] = useState({});
 
   useEffect(() => {
     const runAsync = async () => {
-      const response = await getTest();
-      const { data } = response;
-      if (data.status === 200) {
-        setRevenueData(data.message);
-      } else {
-        setRevenueData(defaultLineChartData);
-      }
+      const revenueResponse = await getSalesRevenue();
+      setRevenueData(revenueResponse.data.message);
     };
     runAsync();
   }, []);
