@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 // @material-ui core components
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
@@ -11,9 +13,22 @@ import MDTypography from "components/MDBase/MDTypography";
 import FormField from "layouts/pages/account/components/FormField";
 
 // Data
-import selectData from "layouts/pages/account/settings/components/BasicInfo/data/selectData";
+import selectDataDefault from "layouts/pages/account/settings/components/BasicInfo/data/selectData";
+
+// API
+import { getAccountBasicInfo } from "util/APIHelper";
 
 function BasicInfo() {
+  const [selectData, setSelectData] = useState(selectDataDefault);
+
+  useEffect(() => {
+    const runAsync = async () => {
+      const selectDataResponse = await getAccountBasicInfo();
+      setSelectData(selectDataResponse.data.message);
+    };
+    runAsync();
+  }, []);
+
   return (
     <Card id="basic-info" sx={{ overflow: "visible" }}>
       <MDBox p={3}>
