@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
@@ -24,7 +26,7 @@ import Header from "layouts/pages/profile/components/Header";
 import PlatformSettings from "layouts/pages/profile/profile-overview/components/PlatformSettings";
 
 // Data
-import profilesListData from "layouts/pages/profile/profile-overview/data/profilesListData";
+// import profilesListData from "layouts/pages/profile/profile-overview/data/profilesListData";
 
 // Images
 import homeDecor1 from "assets/images/home-decor-1.jpg";
@@ -36,7 +38,20 @@ import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
 
+// API
+import { getProfileConversations } from "util/APIHelper";
+
 function Overview() {
+  const [profilesListData, setProfilesListData] = useState([]);
+
+  useEffect(() => {
+    const runAsync = async () => {
+      const profilesListDataResponse = await getProfileConversations();
+      setProfilesListData(profilesListDataResponse.data.message);
+    };
+    runAsync();
+  }, []);
+
   return (
     <DashboardLayout>
       <DashboardNavbar />
