@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Tooltip from "@mui/material/Tooltip";
@@ -20,16 +22,40 @@ import BookingCard from "components/MDComponents/Cards/BookingCard";
 import SalesByCountry from "layouts/dashboards/analytics/components/SalesByCountry";
 
 // Data
-import reportsBarChartData from "layouts/dashboards/analytics/data/reportsBarChartData";
-import reportsLineChartData from "layouts/dashboards/analytics/data/reportsLineChartData";
+// import reportsBarChartData from "layouts/dashboards/analytics/data/reportsBarChartData";
+// import reportsLineChartData from "layouts/dashboards/analytics/data/reportsLineChartData";
 
 // Images
 import booking1 from "assets/images/products/product-1-min.jpg";
 import booking2 from "assets/images/products/product-2-min.jpg";
 import booking3 from "assets/images/products/product-3-min.jpg";
 
+// API
+import {
+  getAnalyticsWebsiteViews,
+  getAnalyticsDailySales,
+  getAnalyticsCompletedTasks,
+} from "util/APIHelper";
+
 function Analytics() {
-  const { sales, tasks } = reportsLineChartData;
+  // const { sales, tasks } = reportsLineChartData;
+  const [websiteData, setWebsiteData] = useState({});
+  const [salesData, setSalesData] = useState({});
+  const [tasksData, setTasksData] = useState({});
+
+  useEffect(() => {
+    const runAsync = async () => {
+      const websiteResponse = await getAnalyticsWebsiteViews();
+      setWebsiteData(websiteResponse.data.message);
+
+      const salesResponse = await getAnalyticsDailySales();
+      setSalesData(salesResponse.data.message);
+
+      const tasksResponse = await getAnalyticsCompletedTasks();
+      setTasksData(tasksResponse.data.message);
+    };
+    runAsync();
+  }, []);
 
   // Action buttons for the BookingCard
   const actionButtons = (
@@ -68,7 +94,7 @@ function Analytics() {
                   title="website views"
                   description="Last Campaign Performance"
                   date="campaign sent 2 days ago"
-                  chart={reportsBarChartData}
+                  chart={websiteData}
                 />
               </MDBox>
             </Grid>
@@ -83,7 +109,7 @@ function Analytics() {
                     </>
                   }
                   date="updated 4 min ago"
-                  chart={sales}
+                  chart={salesData}
                 />
               </MDBox>
             </Grid>
@@ -94,7 +120,7 @@ function Analytics() {
                   title="completed tasks"
                   description="Last Campaign Performance"
                   date="just updated"
-                  chart={tasks}
+                  chart={tasksData}
                 />
               </MDBox>
             </Grid>

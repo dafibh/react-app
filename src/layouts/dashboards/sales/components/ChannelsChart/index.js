@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 // @mui material components
 import Card from "@mui/material/Card";
 import Tooltip from "@mui/material/Tooltip";
@@ -12,14 +14,28 @@ import MDBadgeDot from "components/MDBase/MDBadgeDot";
 import PieChart from "components/MDComponents/Charts/PieChart";
 
 // Data
-import channelChartData from "layouts/dashboards/sales/components/ChannelsChart/data";
+// import channelChartData from "layouts/dashboards/sales/components/ChannelsChart/data";
 
 // Material Dashboard 2 PRO React contexts
 import { useMaterialUIController } from "context/md";
 
+// API
+import { getSalesChannels } from "util/APIHelper";
+
 function ChannelsChart() {
   const [controller] = useMaterialUIController();
   const { darkMode } = controller;
+
+  const [channelData, setChannelData] = useState({});
+
+  useEffect(() => {
+    const runAsync = async () => {
+      const channelResponse = await getSalesChannels();
+
+      setChannelData(channelResponse.data.message);
+    };
+    runAsync();
+  }, []);
 
   return (
     <Card sx={{ height: "100%" }}>
@@ -34,7 +50,7 @@ function ChannelsChart() {
       <MDBox mt={3}>
         <Grid container alignItems="center">
           <Grid item xs={7}>
-            <PieChart chart={channelChartData} height="12.5rem" />
+            <PieChart chart={channelData} height="12.5rem" />
           </Grid>
           <Grid item xs={5}>
             <MDBox pr={1}>

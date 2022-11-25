@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 // @mui material components
 import Grid from "@mui/material/Grid";
 
@@ -21,18 +23,78 @@ import RadarChart from "components/MDComponents/Charts/RadarChart";
 import PolarChart from "components/MDComponents/Charts/PolarChart";
 
 // Data
-import defaultLineChartData from "layouts/pages/charts/data/defaultLineChartData";
-import gradientLineChartData from "layouts/pages/charts/data/gradientLineChartData";
-import verticalBarChartData from "layouts/pages/charts/data/verticalBarChartData";
-import horizontalBarChartData from "layouts/pages/charts/data/horizontalBarChartData";
-import mixedChartData from "layouts/pages/charts/data/mixedChartData";
-import bubbleChartData from "layouts/pages/charts/data/bubbleChartData";
-import defaultDoughnutChartData from "layouts/pages/charts/data/defaultDoughnutChartData";
-import pieChartData from "layouts/pages/charts/data/pieChartData";
-import radarChartData from "layouts/pages/charts/data/radarChartData";
-import polarChartData from "layouts/pages/charts/data/polarChartData";
+// import defaultLineChartData from "layouts/pages/charts/data/defaultLineChartData";
+// import gradientLineChartData from "layouts/pages/charts/data/gradientLineChartData";
+// import verticalBarChartData from "layouts/pages/charts/data/verticalBarChartData";
+// import horizontalBarChartData from "layouts/pages/charts/data/horizontalBarChartData";
+// import mixedChartData from "layouts/pages/charts/data/mixedChartData";
+// import bubbleChartData from "layouts/pages/charts/data/bubbleChartData";
+// import defaultDoughnutChartData from "layouts/pages/charts/data/defaultDoughnutChartData";
+// import pieChartData from "layouts/pages/charts/data/pieChartData";
+// import radarChartData from "layouts/pages/charts/data/radarChartData";
+// import polarChartData from "layouts/pages/charts/data/polarChartData";
+
+// API
+import {
+  getChartsLine,
+  getChartsLineGradient,
+  getChartsBar,
+  getChartsBarHorizontal,
+  getChartsMixed,
+  getChartsBubble,
+  getChartsDoughnut,
+  getChartsPie,
+  getChartsRadar,
+  getChartsPolar,
+} from "util/APIHelper";
 
 function Charts() {
+  const [lineData, setLineData] = useState({});
+  const [lineGradientData, setLineGradientData] = useState({});
+  const [barData, setBarData] = useState({});
+  const [barHorizontalData, setBarHorizontalData] = useState({});
+  const [mixedData, setMixedData] = useState({});
+  const [bubbleData, setBubbleData] = useState({});
+  const [doughnutData, setDoughnutData] = useState({});
+  const [pieData, setPieData] = useState({});
+  const [radarData, setRadarData] = useState({});
+  const [polarData, setPolarData] = useState({});
+
+  useEffect(() => {
+    const runAsync = async () => {
+      const lineResponse = await getChartsLine();
+      setLineData(lineResponse.data.message);
+
+      const lineGradientReponse = await getChartsLineGradient();
+      setLineGradientData(lineGradientReponse.data.message);
+
+      const barResponse = await getChartsBar();
+      setBarData(barResponse.data.message);
+
+      const barHorizontalResponse = await getChartsBarHorizontal();
+      setBarHorizontalData(barHorizontalResponse.data.message);
+
+      const mixedResponse = await getChartsMixed();
+      setMixedData(mixedResponse.data.message);
+
+      const bubbleResponse = await getChartsBubble();
+      setBubbleData(bubbleResponse.data.message);
+
+      const doughnutResponse = await getChartsDoughnut();
+      setDoughnutData(doughnutResponse.data.message);
+
+      const pieResponse = await getChartsPie();
+      setPieData(pieResponse.data.message);
+
+      const radarResponse = await getChartsRadar();
+      setRadarData(radarResponse.data.message);
+
+      const polarResponse = await getChartsPolar();
+      setPolarData(polarResponse.data.message);
+    };
+    runAsync();
+  }, []);
+
   return (
     <DashboardLayout>
       <DashboardNavbar />
@@ -55,7 +117,7 @@ function Charts() {
                 icon={{ component: "insights" }}
                 title="Line chart"
                 description="Product insights"
-                chart={defaultLineChartData}
+                chart={lineData}
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -63,7 +125,7 @@ function Charts() {
                 icon={{ component: "show_chart" }}
                 title="Line chart with gradient"
                 description="Visits from devices"
-                chart={gradientLineChartData}
+                chart={lineGradientData}
               />
             </Grid>
           </Grid>
@@ -75,7 +137,7 @@ function Charts() {
                 icon={{ color: "dark", component: "leaderboard" }}
                 title="Bar chart"
                 description="Sales related to age average"
-                chart={verticalBarChartData}
+                chart={barData}
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -83,7 +145,7 @@ function Charts() {
                 icon={{ color: "dark", component: "splitscreen" }}
                 title="Bar chart horizontal"
                 description="Sales related to age average"
-                chart={horizontalBarChartData}
+                chart={barHorizontalData}
               />
             </Grid>
           </Grid>
@@ -96,7 +158,7 @@ function Charts() {
                 title="Mixed chart"
                 description="Analytics Insights"
                 height="19.75rem"
-                chart={mixedChartData}
+                chart={mixedData}
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -104,7 +166,7 @@ function Charts() {
                 icon={{ color: "primary", component: "multiline_chart" }}
                 title="Bubble chart"
                 description="Users divided by regions"
-                chart={bubbleChartData}
+                chart={bubbleData}
               />
             </Grid>
           </Grid>
@@ -116,7 +178,7 @@ function Charts() {
                 icon={{ color: "success", component: "donut_small" }}
                 title="Doughnut chart"
                 description="Affiliates program"
-                chart={defaultDoughnutChartData}
+                chart={doughnutData}
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -124,7 +186,7 @@ function Charts() {
                 icon={{ color: "success", component: "donut_small" }}
                 title="Pie chart"
                 description="Analytics Insights"
-                chart={pieChartData}
+                chart={pieData}
               />
             </Grid>
           </Grid>
@@ -136,7 +198,7 @@ function Charts() {
                 icon={{ color: "warning", component: "data_saver_on" }}
                 title="Radar chart"
                 description="Sciences score"
-                chart={radarChartData}
+                chart={radarData}
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -144,7 +206,7 @@ function Charts() {
                 icon={{ color: "warning", component: "scatter_plot" }}
                 title="Polar chart"
                 description="Analytics Insights"
-                chart={polarChartData}
+                chart={polarData}
               />
             </Grid>
           </Grid>
