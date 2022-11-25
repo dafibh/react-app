@@ -30,22 +30,25 @@ import ChannelsChart from "layouts/dashboards/sales/components/ChannelsChart";
 // Data
 // import defaultLineChartData from "layouts/dashboards/sales/data/defaultLineChartData";
 // import horizontalBarChartData from "layouts/dashboards/sales/data/horizontalBarChartData";
-import salesTableData from "layouts/dashboards/sales/data/salesTableData";
+// import salesTableData from "layouts/dashboards/sales/data/salesTableData";
 import dataTableData from "layouts/dashboards/sales/data/dataTableData";
 
 // API
-import { getSalesRevenue, getSalesSalesAge } from "util/APIHelper";
+import { getSalesRevenue, getSalesSalesAge, getSalesSalesCountry } from "util/APIHelper";
 
 function Sales() {
   const [revenueData, setRevenueData] = useState({});
   const [salesByAgeData, setSalesByAgeData] = useState({});
+  const [salesByCountryData, setSalesByCountryData] = useState([]);
 
   useEffect(() => {
     const runAsync = async () => {
       const revenueResponse = await getSalesRevenue();
-      const salesByAgeResponse = await getSalesSalesAge();
       setRevenueData(revenueResponse.data.message);
+      const salesByAgeResponse = await getSalesSalesAge();
       setSalesByAgeData(salesByAgeResponse.data.message);
+      const salesByCountryDataResponse = await getSalesSalesCountry();
+      setSalesByCountryData(salesByCountryDataResponse.data.message);
     };
     runAsync();
   }, []);
@@ -189,7 +192,7 @@ function Sales() {
               <HorizontalBarChart title="Sales by age" chart={salesByAgeData} />
             </Grid>
             <Grid item xs={12} lg={4}>
-              <SalesTable title="Sales by Country" rows={salesTableData} />
+              <SalesTable title="Sales by Country" rows={salesByCountryData} />
             </Grid>
           </Grid>
         </MDBox>

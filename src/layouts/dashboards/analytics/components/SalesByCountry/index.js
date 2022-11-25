@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 // @react-jvectormap components
 import { VectorMap } from "@react-jvectormap/core";
 import { worldMerc } from "@react-jvectormap/world";
@@ -15,9 +17,21 @@ import MDTypography from "components/MDBase/MDTypography";
 import SalesTable from "components/MDComponents/Tables/SalesTable";
 
 // Data
-import salesTableData from "layouts/dashboards/analytics/components/SalesByCountry/data/salesTableData";
+// import salesTableData from "layouts/dashboards/analytics/components/SalesByCountry/data/salesTableData";
+
+// API
+import { getAnalyticsSalesCountry } from "util/APIHelper";
 
 function SalesByCountry() {
+  const [salesTableData, setSalesTableData] = useState([]);
+
+  useEffect(() => {
+    const runAsync = async () => {
+      const salesTableDataResponse = await getAnalyticsSalesCountry();
+      setSalesTableData(salesTableDataResponse.data.message);
+    };
+    runAsync();
+  }, []);
   return (
     <Card sx={{ width: "100%" }}>
       <MDBox display="flex">
