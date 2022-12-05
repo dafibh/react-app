@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 
+// Sales dashboard components
+import ProductCell from "layouts/dashboards/sales/components/ProductCell";
+import RefundsCell from "layouts/dashboards/sales/components/RefundsCell";
+import DefaultCell from "layouts/dashboards/sales/components/DefaultCell";
+
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Menu from "@mui/material/Menu";
@@ -31,15 +36,24 @@ import ChannelsChart from "layouts/dashboards/sales/components/ChannelsChart";
 // import defaultLineChartData from "layouts/dashboards/sales/data/defaultLineChartData";
 // import horizontalBarChartData from "layouts/dashboards/sales/data/horizontalBarChartData";
 // import salesTableData from "layouts/dashboards/sales/data/salesTableData";
-import dataTableData from "layouts/dashboards/sales/data/dataTableData";
+// import dataTableData from "layouts/dashboards/sales/data/dataTableData";
 
 // API
-import { getSalesRevenue, getSalesSalesAge, getSalesSalesCountry } from "util/APIHelper";
+import {
+  getSalesRevenue,
+  getSalesSalesAge,
+  getSalesSalesCountry,
+  getSalesTopSelling,
+} from "util/APIHelper";
 
 function Sales() {
   const [revenueData, setRevenueData] = useState({});
   const [salesByAgeData, setSalesByAgeData] = useState({});
   const [salesByCountryData, setSalesByCountryData] = useState([]);
+  const [dataTableData, setDataTableData] = useState({
+    columns: [],
+    rows: [],
+  });
 
   useEffect(() => {
     const runAsync = async () => {
@@ -49,6 +63,28 @@ function Sales() {
       setSalesByAgeData(salesByAgeResponse.data.message);
       const salesByCountryDataResponse = await getSalesSalesCountry();
       setSalesByCountryData(salesByCountryDataResponse.data.message);
+
+      const dataTableDataResponse = await getSalesTopSelling();
+      const dataTableDataContent = {};
+      dataTableDataContent.columns = dataTableDataResponse.data.message.columns;
+      dataTableDataContent.rows = dataTableDataResponse.data.message.rows.map((content) => ({
+        product: (
+          <ProductCell
+            image={content.product.image}
+            name={content.product.name}
+            orders={content.product.orders}
+          />
+        ),
+        value: <DefaultCell>${content.value}</DefaultCell>,
+        adsSpent: <DefaultCell>${content.adsSpent}</DefaultCell>,
+        refunds: (
+          <RefundsCell
+            value={content.refunds.value}
+            icon={{ color: content.refunds.icon.color, name: content.refunds.icon.name }}
+          />
+        ),
+      }));
+      setDataTableData(dataTableDataContent);
     };
     runAsync();
   }, []);
