@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -30,15 +30,63 @@ import UpcomingEvents from "layouts/pages/widgets/components/UpcomingEvents";
 import Chart from "layouts/pages/widgets/components/Chart";
 
 // Data
-import progressLineChartData from "layouts/pages/widgets/data/progressLineChartData";
-import calendarEventsData from "layouts/pages/widgets/data/calendarEventsData";
-import categoriesListData from "layouts/pages/widgets/data/categoriesListData";
-import caloriesChartData from "layouts/pages/widgets/data/caloriesChartData";
+// import progressLineChartData from "layouts/pages/widgets/data/progressLineChartData";
+// import calendarEventsData from "layouts/pages/widgets/data/calendarEventsData";
+// import categoriesListData from "layouts/pages/widgets/data/categoriesListData";
+// import caloriesChartData from "layouts/pages/widgets/data/caloriesChartData";
+
+// API
+import {
+  getWidgetTasks,
+  getWidgetsCalories,
+  getWidgetCalendar,
+  getWidgetsCategories,
+} from "util/APIHelper";
 
 function Widgets() {
   const [lights, setLights] = useState(false);
+  const [progressLineChartData, setProgressLineChartData] = useState({});
+  const [calendarEventsData, setCalendarEventsData] = useState([]);
+  const [categoriesListData, setCategoriesListData] = useState([]);
+  const [caloriesChartData, setCaloriesChartData] = useState({
+    labels: [],
+    datasets: [],
+  });
 
   const handleSetLights = () => setLights(!lights);
+
+  useEffect(() => {
+    const runAsync = async () => {
+      const progressLineChartDataResponse = await getWidgetTasks();
+      setProgressLineChartData(progressLineChartDataResponse.data.message);
+      const calendarEventsDataResponse = await getWidgetCalendar();
+      setCalendarEventsData(calendarEventsDataResponse.data.message);
+      const caloriesChartDataResponse = await getWidgetsCalories();
+      setCaloriesChartData(caloriesChartDataResponse.data.message);
+
+      const categoriesListDataResponse = await getWidgetsCategories();
+      const categoriesListDataContent = categoriesListDataResponse.data.message.map((content) => ({
+        color: content.color,
+        icon: content.icon,
+        name: content.name,
+        description: (
+          <>
+            {content.description.content}
+            <MDTypography
+              variant={content.description.typography.variant}
+              color={content.description.typography.color}
+              fontWeight={content.description.typography.fontWeight}
+            >
+              {content.description.typography.content}
+            </MDTypography>
+          </>
+        ),
+        route: content.route,
+      }));
+      setCategoriesListData(categoriesListDataContent);
+    };
+    runAsync();
+  }, []);
 
   return (
     <DashboardLayout>
