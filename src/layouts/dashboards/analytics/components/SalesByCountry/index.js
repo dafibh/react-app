@@ -33,7 +33,8 @@ function SalesByCountry() {
   //   runAsync();
   // }, []);
   //
-  // vector map issue when using api
+  // ------- COMMENTED DUE TO VECTOR MAP ISSUE WHEN USING API
+
   return (
     <Card sx={{ width: "100%" }}>
       <MDBox display="flex">
