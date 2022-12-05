@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 // @mui material components
 import Card from "@mui/material/Card";
 
@@ -12,9 +14,24 @@ import Footer from "components/MDComponents/Footer";
 import DataTable from "components/MDComponents/Tables/DataTable";
 
 // Data
-import dataTableData from "layouts/applications/data-tables/data/dataTableData";
+// import dataTableData from "layouts/applications/data-tables/data/dataTableData";
+
+// API
+import { getAppDatatable } from "util/APIHelper";
 
 function DataTables() {
+  const [dataTableData, setDataTableData] = useState({
+    columns: [],
+    rows: [],
+  });
+
+  useEffect(() => {
+    const runAsync = async () => {
+      const dataTableDataResponse = await getAppDatatable();
+      setDataTableData(dataTableDataResponse.data.message);
+    };
+    runAsync();
+  }, []);
   return (
     <DashboardLayout>
       <DashboardNavbar />
