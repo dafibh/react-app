@@ -13,13 +13,19 @@ import MDTypography from "components/MDBase/MDTypography";
 import FormField from "layouts/pages/account/components/FormField";
 
 // Data
-import selectDataDefault from "layouts/pages/account/settings/components/BasicInfo/data/selectData";
+// import selectData from "layouts/pages/account/settings/components/BasicInfo/data/selectData";
 
 // API
 import { getAccountBasicInfo } from "util/APIHelper";
 
 function BasicInfo() {
-  const [selectData, setSelectData] = useState(selectDataDefault);
+  const [selectData, setSelectData] = useState({
+    gender: [],
+    birthDate: [],
+    days: [],
+    years: [],
+    skills: [],
+  });
 
   useEffect(() => {
     const runAsync = async () => {
