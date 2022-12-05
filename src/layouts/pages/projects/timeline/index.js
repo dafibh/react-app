@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 // @mui material components teer
 import Grid from "@mui/material/Grid";
 
@@ -12,9 +14,22 @@ import TimelineList from "components/MDComponents/Timeline/TimelineList";
 import TimelineItem from "components/MDComponents/Timeline/TimelineItem";
 
 // Data
-import timelineData from "layouts/pages/projects/timeline/data/timelineData";
+// import timelineData from "layouts/pages/projects/timeline/data/timelineData";
+
+// API
+import { getProjectsTimeline } from "util/APIHelper";
 
 function Timeline() {
+  const [timelineData, setTimelineData] = useState([]);
+
+  useEffect(() => {
+    const runAsync = async () => {
+      const timelineDataResponse = await getProjectsTimeline();
+      setTimelineData(timelineDataResponse.data.message);
+    };
+    runAsync();
+  }, []);
+
   const renderTimelineItems = timelineData.map(
     ({ color, icon, title, dateTime, description, badges, lastItem }) => (
       <TimelineItem
