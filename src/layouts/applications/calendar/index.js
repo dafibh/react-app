@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -18,9 +18,22 @@ import NextEvents from "layouts/applications/calendar/components/NextEvents";
 import ProductivityChart from "layouts/applications/calendar/components/ProductivityChart";
 
 // Data
-import calendarEventsData from "layouts/applications/calendar/data/calendarEventsData";
+// import calendarEventsData from "layouts/applications/calendar/data/calendarEventsData";
+
+// API
+import { getAppCalendar } from "util/APIHelper";
 
 function Calendar() {
+  const [calendarEventsData, setCalendarEventsData] = useState([]);
+
+  useEffect(() => {
+    const runAsync = async () => {
+      const calendarEventsDataResponse = await getAppCalendar();
+      setCalendarEventsData(calendarEventsDataResponse.data.message);
+    };
+    runAsync();
+  }, []);
+
   return (
     <DashboardLayout>
       <DashboardNavbar />
