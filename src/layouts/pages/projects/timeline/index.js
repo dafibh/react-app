@@ -1,4 +1,4 @@
-// @mui material components test
+// @mui material components
 import Grid from "@mui/material/Grid";
 
 // Material Dashboard 2 PRO React components
