@@ -301,7 +301,7 @@ function DefaultNavbar({ routes, brand, transparent, light, action }) {
   // Routes dropdown menu
   const dropdownMenu = (
     <Popper
-      anchorEl={dropdown}
+      anchorEl={dropdownEl}
       popperRef={null}
       open={Boolean(dropdown)}
       placement="top-start"
@@ -320,7 +320,6 @@ function DefaultNavbar({ routes, brand, transparent, light, action }) {
       onMouseLeave={() => {
         if (!nestedDropdown) {
           setDropdown(null);
-          setDropdownName("");
         }
       }}
     >
