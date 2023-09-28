@@ -146,7 +146,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
 
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
   const renderRoutes = routes.map(
-    ({ type, name, icon, title, collapse, noCollapse, key, href, route, short }) => {
+    ({ type, name, icon, title, collapse, noCollapse, key, href, route }) => {
       let returnValue;
 
       if (type === "collapse") {
@@ -210,8 +210,13 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
             mt={2}
             mb={1}
             ml={1}
+            sx={(miniSidenav && title.length>5)?{
+              background: `linear-gradient(to left, rgba(0,0,0,0), ${textColor})`,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }:null}
           >
-            {(miniSidenav && short && title.length>5)?({short}.short):({title}.title)}
+            {title}
           </MDTypography>
         );
       } else if (type === "divider") {
