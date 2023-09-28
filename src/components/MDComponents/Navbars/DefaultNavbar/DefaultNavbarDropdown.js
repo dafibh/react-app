@@ -13,16 +13,16 @@ import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
 function DefaultNavbarDropdown({
-  name,
-  icon,
-  children,
-  collapseStatus,
-  light,
-  href,
-  route,
-  collapse,
-  ...rest
-}) {
+                                 name,
+                                 icon,
+                                 children,
+                                 collapseStatus,
+                                 light,
+                                 href,
+                                 route,
+                                 collapse,
+                                 ...rest
+                               }) {
   const linkComponent = {
     component: "a",
     href,
@@ -44,7 +44,6 @@ function DefaultNavbarDropdown({
         display="flex"
         alignItems="baseline"
         color={light ? "white" : "dark"}
-        opacity={light ? 1 : 0.6}
         sx={{ cursor: "pointer", userSelect: "none" }}
         {...(route && routeComponent)}
         {...(href && linkComponent)}
@@ -63,13 +62,14 @@ function DefaultNavbarDropdown({
           variant="button"
           fontWeight="regular"
           textTransform="capitalize"
-          color={light ? "white" : "dark"}
+          color={light ? "white" : "inherit"}
+          opacity={0.6}
           sx={{ fontWeight: "100%", ml: 1, mr: 0.25 }}
         >
           {name}
         </MDTypography>
-        <MDTypography variant="body2" color={light ? "white" : "dark"} ml="auto">
-          <Icon sx={{ fontWeight: "normal", verticalAlign: "middle" }}>
+        <MDTypography variant="body2" color={light ? "white" : "dark"} ml="auto" opacity={0.9}>
+          <Icon sx={{ fontWeight: "normal", verticalAlign: "middle" }} color="secondary">
             {collapse && "keyboard_arrow_down"}
           </Icon>
         </MDTypography>

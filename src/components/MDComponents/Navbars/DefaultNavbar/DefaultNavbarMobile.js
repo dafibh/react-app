@@ -49,7 +49,7 @@ function DefaultNavbarMobile({ routes, open }) {
                         width="1.5rem"
                         height="1.5rem"
                         borderRadius="md"
-                        color="text"
+                        color="secondary"
                         mr={1}
                         fontSize="1rem"
                         lineHeight={1}
@@ -61,6 +61,7 @@ function DefaultNavbarMobile({ routes, open }) {
                         variant="button"
                         fontWeight="bold"
                         textTransform="capitalize"
+                        color="inherit"
                       >
                         {item.name}
                       </MDTypography>
@@ -76,7 +77,7 @@ function DefaultNavbarMobile({ routes, open }) {
                         minWidth="11.25rem"
                         display="block"
                         variant="button"
-                        color="text"
+                        color="secondary"
                         textTransform="capitalize"
                         fontWeight="regular"
                         py={0.625}
@@ -130,7 +131,7 @@ function DefaultNavbarMobile({ routes, open }) {
                       width="1.5rem"
                       height="1.5rem"
                       borderRadius="md"
-                      color="text"
+                      color="secondary"
                       mr={1}
                       fontSize="1rem"
                       lineHeight={1}
@@ -144,6 +145,7 @@ function DefaultNavbarMobile({ routes, open }) {
                         fontWeight={!item.description ? "regular" : "bold"}
                         mt={!item.description ? 0.25 : 0}
                         textTransform="capitalize"
+                        color="inherit"
                       >
                         {item.name || "&nbsp"}
                       </MDTypography>
@@ -151,7 +153,7 @@ function DefaultNavbarMobile({ routes, open }) {
                         <MDTypography
                           display="block"
                           variant="button"
-                          color="text"
+                          color="secondary"
                           fontWeight="regular"
                           sx={{ transition: "all 300ms linear" }}
                         >
