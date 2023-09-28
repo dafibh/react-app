@@ -11,9 +11,9 @@ const { size } = typography;
 const contained = {
   base: {
     backgroundColor: white.main,
-    minHeight: pxToRem(37),
+    minHeight: pxToRem(40),
     color: text.main,
-    padding: `${pxToRem(9)} ${pxToRem(24)}`,
+    padding: `${pxToRem(10)} ${pxToRem(24)}`,
 
     "&:hover": {
       backgroundColor: white.main,
@@ -29,8 +29,8 @@ const contained = {
   },
 
   small: {
-    minHeight: pxToRem(29),
-    padding: `${pxToRem(6)} ${pxToRem(18)}`,
+    minHeight: pxToRem(32),
+    padding: `${pxToRem(6)} ${pxToRem(16)}`,
     fontSize: size.xs,
 
     "& .material-icon, .material-icons-round, svg": {
@@ -39,8 +39,8 @@ const contained = {
   },
 
   large: {
-    minHeight: pxToRem(44),
-    padding: `${pxToRem(12)} ${pxToRem(64)}`,
+    minHeight: pxToRem(47),
+    padding: `${pxToRem(12)} ${pxToRem(28)}`,
     fontSize: size.sm,
 
     "& .material-icon, .material-icons-round, svg": {
