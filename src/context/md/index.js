@@ -67,7 +67,7 @@ function MaterialUIControllerProvider({ children }) {
     fixedNavbar: true,
     openConfigurator: false,
     layout: "dashboard",
-    darkMode: true,
+    darkMode: localStorage.getItem("darkMode") !== "false",
     loggedIn: false,
     user: null
   };
@@ -106,7 +106,17 @@ const setTransparentNavbar = (dispatch, value) => dispatch({ type: "TRANSPARENT_
 const setFixedNavbar = (dispatch, value) => dispatch({ type: "FIXED_NAVBAR", value });
 const setOpenConfigurator = (dispatch, value) => dispatch({ type: "OPEN_CONFIGURATOR", value });
 const setLayout = (dispatch, value) => dispatch({ type: "LAYOUT", value });
-const setDarkMode = (dispatch, value) => dispatch({ type: "DARKMODE", value });
+const setDarkMode = (dispatch, value) => {
+  let color;
+  if (!value) {
+    color = "#f0f2f5";
+  } else {
+    color = "#1a2035";
+  }
+  localStorage.setItem("darkMode", value);
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", color);
+  dispatch({ type: "DARKMODE", value });
+};
 const setLogin = (dispatch, value) => dispatch({ type: "LOGIN", value });
 const setUser = (dispatch, value) => dispatch({ type: "USER", value });
 
