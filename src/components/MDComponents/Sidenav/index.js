@@ -109,10 +109,10 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
     }
 
     // Render all the nested collapse items from the routes.js
-    const renderNestedCollapse = (collapse) => collapse.map(({name, route, key, href, auth}) =>
+    const renderNestedCollapse = (collapse) => collapse.map(({name, route, key, href, auth, hidden}) =>
     {
         let returnValue;
-        if (!(user && loggedIn) && auth) {
+        if ((!(user && loggedIn) && auth) || hidden) {
             return null;
         }
 
@@ -139,11 +139,11 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
     });
   // Render the all the collapses from the routes.js
   const renderCollapse = (collapses) =>
-    collapses.map(({ name, collapse, route, href, key, auth }) => {
+    collapses.map(({ name, collapse, route, href, key, auth, admin, hidden }) => {
       let returnValue;
 
       // TODO: Auth Here
-      if(!(user && loggedIn) && auth){
+      if((!handleLogin() && auth) || (handleLogin() && key === "login") || (!handleAdmin() && admin) || hidden){
         return null;
       }
 
@@ -186,11 +186,11 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
 
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
   const renderRoutes = routes.map(
-    ({ type, name, icon, title, collapse, noCollapse, key, href, route, auth }) => {
+    ({ type, name, icon, title, collapse, noCollapse, key, href, route, auth, admin, profile, hidden }) => {
       let returnValue;
 
       // TODO: Auth Here
-      if(!(user && loggedIn) && auth){
+      if((!handleLogin() && auth) || (handleLogin() && key === "login") || (!handleAdmin() && admin) || hidden){
         return null;
       }
 
