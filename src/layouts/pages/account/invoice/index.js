@@ -14,8 +14,8 @@ import MDButton from "components/MDBase/MDButton";
 import BaseLayout from "layouts/pages/account/components/BaseLayout";
 
 // Images
-import logoCT from "assets/images/logo-ct.png";
-import logoCTDark from "assets/images/logo-ct-dark.png";
+import logoCT from "../../../../assets/images/logo.png";
+import logoCTDark from "../../../../assets/images/logo-dark.png";
 
 // MD React context
 import { useMaterialUIController } from "context/md";

@@ -107,7 +107,7 @@ function Footer() {
         </Grid>
         <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
           <MDTypography variant="body2" color="secondary">
-            Copyright &copy; 2021 Material by Creative Tim.
+            Copyright &copy; {new Date().getFullYear()} {process.env.REACT_APP_NAME}
           </MDTypography>
         </Grid>
       </Grid>
