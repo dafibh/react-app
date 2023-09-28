@@ -164,6 +164,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
                 icon={icon}
                 active={key === collapseName}
                 noCollapse={noCollapse}
+                color={color}
               />
             </Link>
           );
@@ -175,6 +176,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
                 icon={icon}
                 noCollapse={noCollapse}
                 active={key === collapseName}
+                color={color}
               >
                 {collapse ? renderCollapse(collapse) : null}
               </SidenavCollapse>
@@ -189,6 +191,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
               active={key === collapseName}
               open={openCollapse === key}
               onClick={() => (openCollapse === key ? setOpenCollapse(false) : setOpenCollapse(key))}
+              color={color}
             >
               {collapse ? renderCollapse(collapse) : null}
             </SidenavCollapse>
