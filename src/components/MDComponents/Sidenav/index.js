@@ -37,7 +37,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
   const [openCollapse, setOpenCollapse] = useState(false);
   const [openNestedCollapse, setOpenNestedCollapse] = useState(false);
   const [controller, dispatch] = useMaterialUIController();
-  const { miniSidenav, transparentSidenav, whiteSidenav, darkMode } = controller;
+  const { miniSidenav, transparentSidenav, whiteSidenav, darkMode, loggedIn, user } = controller;
   const location = useLocation();
   const { pathname } = location;
   const collapseName = pathname.split("/").slice(1)[0];
@@ -84,8 +84,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
   const renderNestedCollapse = (collapse) => {
     const template = collapse.map(({ name, route, key, href, auth }) => {
       let returnValue;
-      // TODO: Auth Here
-      if(auth){
+      if(!(user && loggedIn) && auth){
         return null;
       }
 
@@ -119,7 +118,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
       let returnValue;
 
       // TODO: Auth Here
-      if(auth){
+      if(!(user && loggedIn) && auth){
         return null;
       }
 
@@ -166,7 +165,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
       let returnValue;
 
       // TODO: Auth Here
-      if(auth){
+      if(!(user && loggedIn) && auth){
         return null;
       }
 

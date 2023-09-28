@@ -44,6 +44,12 @@ function reducer(state, action) {
     case "DARKMODE": {
       return { ...state, darkMode: action.value };
     }
+    case "LOGIN": {
+      return { ...state, loggedIn: action.value };
+    }
+    case "USER": {
+      return { ...state, user: action.value };
+    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -62,6 +68,8 @@ function MaterialUIControllerProvider({ children }) {
     openConfigurator: false,
     layout: "dashboard",
     darkMode: true,
+    loggedIn: false,
+    user: null
   };
 
   const [controller, dispatch] = useReducer(reducer, initialState);
@@ -99,6 +107,9 @@ const setFixedNavbar = (dispatch, value) => dispatch({ type: "FIXED_NAVBAR", val
 const setOpenConfigurator = (dispatch, value) => dispatch({ type: "OPEN_CONFIGURATOR", value });
 const setLayout = (dispatch, value) => dispatch({ type: "LAYOUT", value });
 const setDarkMode = (dispatch, value) => dispatch({ type: "DARKMODE", value });
+const setLogin = (dispatch, value) => dispatch({ type: "LOGIN", value });
+const setUser = (dispatch, value) => dispatch({ type: "USER", value });
+
 
 export {
   MaterialUIControllerProvider,
@@ -112,4 +123,6 @@ export {
   setOpenConfigurator,
   setLayout,
   setDarkMode,
+  setLogin,
+  setUser
 };

@@ -47,7 +47,7 @@ export default function App() {
     sidenavColor,
     transparentSidenav,
     whiteSidenav,
-    darkMode,
+    darkMode
   } = controller;
   const [onMouseEnter, setOnMouseEnter] = useState(false);
   const [rtlCache, setRtlCache] = useState(null);
@@ -94,6 +94,13 @@ export default function App() {
         return getRoutes(route.collapse);
       }
 
+      if (route.auth) {
+        return (
+          <Route element={<ProtectedRoutes/>}>
+            <Route exact path={route.route} element={route.component} key={route.key} />
+          </Route>
+        );
+      }
       if (route.route) {
         return <Route exact path={route.route} element={route.component} key={route.key} />;
       }
