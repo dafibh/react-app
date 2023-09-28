@@ -364,7 +364,7 @@ function Invoice() {
                     >
                       email:{" "}
                       <MDTypography component="span" variant="h6" fontWeight="regular">
-                        support@creative-tim.com
+                        support@example.com
                       </MDTypography>
                     </MDTypography>
                   </Grid>

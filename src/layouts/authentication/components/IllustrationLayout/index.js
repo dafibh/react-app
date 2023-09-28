@@ -28,7 +28,7 @@ function IllustrationLayout({ header, title, description, illustration, children
         routes={pageRoutes}
         action={{
           type: "external",
-          route: "https://creative-tim.com/product/material-dashboard-pro-react",
+          route: "/",
           label: "buy now",
         }}
       />

@@ -136,7 +136,7 @@ function Accounts() {
             >
               <MDBox mr={2} mb={{ xs: 1, sm: 0 }} lineHeight={0}>
                 <MDTypography variant="button" fontWeight="medium">
-                  hello@creative-tim.com
+                  hello@example.com
                 </MDTypography>
               </MDBox>
               <MDButton variant="gradient" color="dark" size="small">
