@@ -80,38 +80,35 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
     return () => window.removeEventListener("resize", handleMiniSidenav);
   }, [dispatch, location]);
 
-  // Render all the nested collapse items from the routes.js
-  const renderNestedCollapse = (collapse) => {
-    const template = collapse.map(({ name, route, key, href, auth }) => {
-      let returnValue;
-      if(!(user && loggedIn) && auth){
-        return null;
-      }
+    // Render all the nested collapse items from the routes.js
+    const renderNestedCollapse = (collapse) => collapse.map(({name, route, key, href, auth}) =>
+    {
+        let returnValue;
+        if (!(user && loggedIn) && auth) {
+            return null;
+        }
 
-      if(href){
-        returnValue = (
-          <Link
-            key={key}
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-            sx={{ textDecoration: "none" }}
-          >
-            <SidenavItem name={name} nested />
-          </Link>
-        );
-      } else {
-        returnValue = (
-          <NavLink to={route} key={key} sx={{ textDecoration: "none" }}>
-            <SidenavItem color={color} name={name} active={route === pathname} nested />
-          </NavLink>
-        );
-      }
-      return returnValue;
+        if (href) {
+            returnValue = (
+                <Link
+                    key={key}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    sx={{textDecoration: "none"}}
+                >
+                    <SidenavItem name={name} nested/>
+                </Link>
+            );
+        } else {
+            returnValue = (
+                <NavLink to={route} key={key} sx={{textDecoration: "none"}}>
+                    <SidenavItem color={color} name={name} active={route === pathname} nested/>
+                </NavLink>
+            );
+        }
+        return returnValue;
     });
-
-    return template;
-  };
   // Render the all the collapses from the routes.js
   const renderCollapse = (collapses) =>
     collapses.map(({ name, collapse, route, href, key, auth }) => {
