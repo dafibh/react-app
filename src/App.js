@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 
 // react-router components
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
@@ -42,6 +42,7 @@ export default function App() {
   const [controller, dispatch] = useMaterialUIController();
   const {
     miniSidenav,
+    layout,
     openConfigurator,
     sidenavColor,
     transparentSidenav,
@@ -157,7 +158,7 @@ export default function App() {
           <Sidenav
             color={sidenavColor}
             brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-            brandName="Material Dashboard PRO"
+            brandName={process.env.REACT_APP_NAME}
             routes={routes}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
