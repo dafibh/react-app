@@ -1,10 +1,14 @@
-import { Outlet } from "react-router-dom";
+import {Navigate, Outlet} from "react-router-dom";
 import SignInBasic from "layouts/authentication/sign-in/basic";
 
 const useAuth = () => {
   const user = { loggedIn: false };
   return user && user.loggedIn;
 };
+
+export function InverseProtectedRoutes() {
+  return useAuth() ? <Navigate to="/" /> : <Outlet />;
+}
 
 export default function ProtectedRoutes() {
   const isAuth = useAuth();

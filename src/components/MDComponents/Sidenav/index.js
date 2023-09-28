@@ -68,9 +68,9 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
       setWhiteSidenav(dispatch, window.innerWidth < 1200 ? false : whiteSidenav);
     }
 
-    /** 
+    /**
      The event listener that's calling the handleMiniSidenav function when resizing the window.
-    */
+     */
     window.addEventListener("resize", handleMiniSidenav);
 
     // Call the handleMiniSidenav function to set the state with the initial value.
@@ -82,30 +82,46 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
 
   // Render all the nested collapse items from the routes.js
   const renderNestedCollapse = (collapse) => {
-    const template = collapse.map(({ name, route, key, href }) =>
-      href ? (
-        <Link
-          key={key}
-          href={href}
-          target="_blank"
-          rel="noreferrer"
-          sx={{ textDecoration: "none" }}
-        >
-          <SidenavItem name={name} nested />
-        </Link>
-      ) : (
-        <NavLink to={route} key={key} sx={{ textDecoration: "none" }}>
-          <SidenavItem color={color} name={name} active={route === pathname} nested />
-        </NavLink>
-      )
-    );
+    const template = collapse.map(({ name, route, key, href, auth }) => {
+      let returnValue;
+      // TODO: Auth Here
+      if(auth){
+        return null;
+      }
+
+      if(href){
+        returnValue = (
+          <Link
+            key={key}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            sx={{ textDecoration: "none" }}
+          >
+            <SidenavItem name={name} nested />
+          </Link>
+        );
+      } else {
+        returnValue = (
+          <NavLink to={route} key={key} sx={{ textDecoration: "none" }}>
+            <SidenavItem color={color} name={name} active={route === pathname} nested />
+          </NavLink>
+        );
+      }
+      return returnValue;
+    });
 
     return template;
   };
-  // Render the all the collpases from the routes.js
+  // Render the all the collapses from the routes.js
   const renderCollapse = (collapses) =>
-    collapses.map(({ name, collapse, route, href, key }) => {
+    collapses.map(({ name, collapse, route, href, key, auth }) => {
       let returnValue;
+
+      // TODO: Auth Here
+      if(auth){
+        return null;
+      }
 
       if (collapse) {
         returnValue = (
@@ -146,8 +162,13 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
 
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
   const renderRoutes = routes.map(
-    ({ type, name, icon, title, collapse, noCollapse, key, href, route }) => {
+    ({ type, name, icon, title, collapse, noCollapse, key, href, route, auth }) => {
       let returnValue;
+
+      // TODO: Auth Here
+      if(auth){
+        return null;
+      }
 
       if (type === "collapse") {
         if (href) {
