@@ -26,12 +26,10 @@ import SidenavRoot from "components/MDComponents/Sidenav/SidenavRoot";
 import sidenavLogoLabel from "components/MDComponents/Sidenav/styles/sidenav";
 
 // Material Dashboard 2 PRO React context
-import {
-  useMaterialUIController,
-  setMiniSidenav,
-  setTransparentSidenav,
-  setWhiteSidenav,
-} from "context/md";
+import {setMiniSidenav, setTransparentSidenav, setWhiteSidenav, useMaterialUIController,} from "context/md";
+
+import colors from "assets/theme/base/colors";
+import colorsDark from "assets/theme-dark/base/colors";
 
 function Sidenav({ color, brand, brandName, routes, ...rest }) {
   const [openCollapse, setOpenCollapse] = useState(false);
@@ -50,7 +48,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
   if (transparentSidenav || (whiteSidenav && !darkMode)) {
     textColor = "dark";
   } else if (whiteSidenav && darkMode) {
-    textColor = "inherit";
+    textColor = "force-dark";
   }
 
   const closeSidenav = () => setMiniSidenav(dispatch, true);
@@ -79,6 +77,36 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleMiniSidenav);
   }, [dispatch, location]);
+
+    const handleLogin = () => (loggedIn && user);
+
+    const handleAdmin = () => {
+        let admin = false;
+        if(user){
+            admin = (user.uid === process.env.REACT_APP_ADMIN_UID);
+        }
+
+        return (handleLogin() && admin);
+    };
+
+    const handleTransparentColor = () => {
+        let transparentColor;
+        if (whiteSidenav){
+            transparentColor = colors.text.main;
+        } else {
+            transparentColor = colorsDark.text.main;
+        }
+
+        if (transparentSidenav) {
+            if (darkMode) {
+                transparentColor = colorsDark.text.main;
+            } else {
+                transparentColor = colors.text.main;
+            }
+        }
+
+        return transparentColor;
+    }
 
     // Render all the nested collapse items from the routes.js
     const renderNestedCollapse = (collapse) => collapse.map(({name, route, key, href, auth}) =>
@@ -228,7 +256,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
             mb={1}
             ml={1}
             sx={(miniSidenav && title.length>5)?{
-              background: `linear-gradient(to left, rgba(0,0,0,0), ${textColor})`,
+              background: `linear-gradient(to left, rgba(0,0,0,0), ${handleTransparentColor()})`,
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }:null}

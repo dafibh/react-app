@@ -35,7 +35,8 @@ export default styled(Typography)(({ theme, ownerState }) => {
   // color value
   let colorValue = color === "inherit" || !palette[color] ? "inherit" : palette[color].main;
 
-  if (darkMode && (color === "inherit" || !palette[color])) {
+  if (darkMode && color === "force-dark") colorValue = palette.dark.main;
+  else if (darkMode && (color === "inherit" || !palette[color])) {
     colorValue = "inherit";
   } else if (darkMode && color === "dark") colorValue = white.main;
 
