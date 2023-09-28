@@ -1,13 +1,13 @@
 /**
- * The base border styles for the Material Dashboard 2 PRO React.
+ * The base border styles for the MD React.
  * You can add new border width, border color or border radius using this file.
- * You can customized the borders value for the entire Material Dashboard 2 PRO React using thie file.
+ * You can customized the borders value for the entire MD React using thie file.
  */
 
-// Material Dashboard 2 PRO React Base Styles
+// MD React Base Styles
 import colors from "assets/theme/base/colors";
 
-// Material Dashboard 2 PRO React Helper Functions
+// MD React Helper Functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { grey } = colors;

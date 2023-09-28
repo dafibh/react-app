@@ -13,13 +13,13 @@ import Tooltip from "@mui/material/Tooltip";
 import Icon from "@mui/material/Icon";
 import Card from "@mui/material/Card";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDBadgeDot from "components/MDBase/MDBadgeDot";
 import MDButton from "components/MDBase/MDButton";
 import MDTypography from "components/MDBase/MDTypography";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import DashboardLayout from "components/MDComponents/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "components/MDComponents/Navbars/DashboardNavbar";
 import Footer from "components/MDComponents/Footer";

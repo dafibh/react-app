@@ -6,7 +6,7 @@ import ImgsViewer from "react-images-viewer";
 // @mui material components
 import Stack from "@mui/material/Stack";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 
 // Images

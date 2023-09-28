@@ -1,7 +1,7 @@
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 

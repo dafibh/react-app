@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import Autocomplete from "@mui/material/Autocomplete";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 import MDEditor from "components/MDBase/MDEditor";

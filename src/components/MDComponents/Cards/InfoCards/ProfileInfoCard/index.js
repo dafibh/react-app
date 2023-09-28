@@ -10,11 +10,11 @@ import Divider from "@mui/material/Divider";
 import Tooltip from "@mui/material/Tooltip";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
-// Material Dashboard 2 PRO React base styles
+// MD React base styles
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 

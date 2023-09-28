@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
 // @mui material components
 import Link from "@mui/material/Link";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
-// Material Dashboard 2 PRO React base styles
+// MD React base styles
 import typography from "assets/theme/base/typography";
 
 function Footer({ company, links }) {

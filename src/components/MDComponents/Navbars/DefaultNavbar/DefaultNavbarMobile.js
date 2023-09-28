@@ -11,11 +11,11 @@ import Collapse from "@mui/material/Collapse";
 import MuiLink from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React TS components
+// MD React TS components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
-// Material Dashboard 2 PRO React TS exampless
+// MD React TS exampless
 import DefaultNavbarDropdown from "components/MDComponents/Navbars/DefaultNavbar/DefaultNavbarDropdown";
 
 function DefaultNavbarMobile({ routes, open }) {

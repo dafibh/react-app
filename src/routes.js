@@ -1,5 +1,5 @@
 /** 
-  All of the routes for the Material Dashboard 2 PRO React are added here,
+  All of the routes for the MD React are added here,
   You can add a new route, customize the routes and delete the routes here.
 
   Once you add a new route on this file it will be visible automatically on
@@ -20,7 +20,7 @@
   10. The `component` key is used to store the component of its route.
 */
 
-// Material Dashboard 2 PRO React layouts
+// MD React layouts
 import Analytics from "layouts/dashboards/analytics";
 import Sales from "layouts/dashboards/sales";
 import ProfileOverview from "layouts/pages/profile/profile-overview";
@@ -50,7 +50,7 @@ import SignInIllustration from "layouts/authentication/sign-in/illustration";
 import SignUpCover from "layouts/authentication/sign-up/cover";
 import ResetCover from "layouts/authentication/reset-password/cover";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDAvatar from "components/MDBase/MDAvatar";
 
 // @mui icons

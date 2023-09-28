@@ -8,18 +8,18 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import Sidenav from "components/MDComponents/Sidenav";
 import Configurator from "components/MDComponents/Configurator";
 
-// Material Dashboard 2 PRO React themes
+// MD React themes
 import theme from "assets/theme";
 import themeRTL from "assets/theme/theme-rtl";
 
-// Material Dashboard 2 PRO React Dark Mode themes
+// MD React Dark Mode themes
 import themeDark from "assets/theme-dark";
 import themeDarkRTL from "assets/theme-dark/theme-rtl";
 
@@ -28,10 +28,10 @@ import rtlPlugin from "stylis-plugin-rtl";
 import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 
-// Material Dashboard 2 PRO React routes
+// MD React routes
 import routes from "routes";
 
-// Material Dashboard 2 PRO React contexts
+// MD React contexts
 import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "context/md";
 
 // Images
@@ -141,7 +141,7 @@ export default function App() {
             <Sidenav
               color={sidenavColor}
               brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-              brandName="Material Dashboard PRO"
+              brandName={process.env.REACT_APP_NAME}
               routes={routes}
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}

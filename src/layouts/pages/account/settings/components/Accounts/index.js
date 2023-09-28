@@ -7,7 +7,7 @@ import Switch from "@mui/material/Switch";
 import Tooltip from "@mui/material/Tooltip";
 import Divider from "@mui/material/Divider";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 import MDAvatar from "components/MDBase/MDAvatar";
@@ -20,7 +20,7 @@ import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
 import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
 import logoAsana from "assets/images/small-logos/logo-asana.svg";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import { useMaterialUIController } from "context/md";
 
 function Accounts() {

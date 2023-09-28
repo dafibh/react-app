@@ -9,13 +9,13 @@ import Dropzone from "dropzone";
 // Dropzone styles
 import "dropzone/dist/dropzone.css";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 
 // Custom styles for the MDDropzone
 import MDDropzoneRoot from "components/MDBase/MDDropzone/MDDropzoneRoot";
 
-// Material Dashboard 2 PRO React context
+// MD React context
 import { useMaterialUIController } from "context/md";
 
 function MDDropzone({ options }) {

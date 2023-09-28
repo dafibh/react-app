@@ -12,13 +12,13 @@ import { v4 as uuidv4 } from "uuid";
 // @mui material components
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDButton from "components/MDBase/MDButton";
 import MDTypography from "components/MDBase/MDTypography";
 import MDInput from "components/MDBase/MDInput";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import DashboardLayout from "components/MDComponents/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "components/MDComponents/Navbars/DashboardNavbar";
 import Footer from "components/MDComponents/Footer";
@@ -29,7 +29,7 @@ import Header from "layouts/applications/kanban/components/Header";
 // Data
 import boards from "layouts/applications/kanban/data";
 
-// Material Dashboard 2 PRO React context
+// MD React context
 import { useMaterialUIController } from "context/md";
 
 function Kanban() {

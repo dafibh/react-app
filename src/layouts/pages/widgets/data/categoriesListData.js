@@ -1,4 +1,4 @@
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDTypography from "components/MDBase/MDTypography";
 
 const categoriesListData = [

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 import MDProgress from "components/MDBase/MDProgress";
@@ -14,7 +14,7 @@ import ProductCell from "layouts/ecommerce/products/product-page/components/Prod
 import ReviewCell from "layouts/ecommerce/products/product-page/components/ReviewCell";
 import DefaultCell from "layouts/ecommerce/products/product-page/components/DefaultCell";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import DashboardLayout from "components/MDComponents/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "components/MDComponents/Navbars/DashboardNavbar";
 import Footer from "components/MDComponents/Footer";

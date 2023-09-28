@@ -4,11 +4,11 @@ import { useEffect, useMemo, useState } from "react";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import DashboardLayout from "components/MDComponents/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "components/MDComponents/Navbars/DashboardNavbar";
 import Footer from "components/MDComponents/Footer";
@@ -35,7 +35,7 @@ import calendarEventsData from "layouts/pages/rtl/data/calendarEventsData";
 import categoriesListData from "layouts/pages/rtl/data/categoriesListData";
 import caloriesChartData from "layouts/pages/rtl/data/caloriesChartData";
 
-// Material Dashboard 2 PRO React contexts
+// MD React contexts
 import { useMaterialUIController, setDirection } from "context/md";
 
 function RTL() {

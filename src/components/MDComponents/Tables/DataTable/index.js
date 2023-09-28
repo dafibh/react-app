@@ -14,13 +14,13 @@ import TableRow from "@mui/material/TableRow";
 import Icon from "@mui/material/Icon";
 import Autocomplete from "@mui/material/Autocomplete";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 import MDInput from "components/MDBase/MDInput";
 import MDPagination from "components/MDBase/MDPagination";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import DataTableHeadCell from "components/MDComponents/Tables/DataTable/DataTableHeadCell";
 import DataTableBodyCell from "components/MDComponents/Tables/DataTable/DataTableBodyCell";
 

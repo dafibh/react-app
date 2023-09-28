@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 // @mui material components
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 
-// Material Dashboard 2 PRO React contexts
+// MD React contexts
 import { useMaterialUIController } from "context/md";
 
 function DataTableHeadCell({ width, children, sorted, align, ...rest }) {

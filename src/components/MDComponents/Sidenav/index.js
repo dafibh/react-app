@@ -12,11 +12,11 @@ import Divider from "@mui/material/Divider";
 import Link from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import SidenavCollapse from "components/MDComponents/Sidenav/SidenavCollapse";
 import SidenavList from "components/MDComponents/Sidenav/SidenavList";
 import SidenavItem from "components/MDComponents/Sidenav/SidenavItem";
@@ -25,7 +25,7 @@ import SidenavItem from "components/MDComponents/Sidenav/SidenavItem";
 import SidenavRoot from "components/MDComponents/Sidenav/SidenavRoot";
 import sidenavLogoLabel from "components/MDComponents/Sidenav/styles/sidenav";
 
-// Material Dashboard 2 PRO React context
+// MD React context
 import {setMiniSidenav, setTransparentSidenav, setWhiteSidenav, useMaterialUIController,} from "context/md";
 
 import colors from "assets/theme/base/colors";

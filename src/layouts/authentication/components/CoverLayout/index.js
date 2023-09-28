@@ -4,18 +4,18 @@ import PropTypes from "prop-types";
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 // import MDTypography from "components/MDBase/MDTypography";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import DefaultNavbar from "components/MDComponents/Navbars/DefaultNavbar";
 import PageLayout from "components/MDComponents/LayoutContainers/PageLayout";
 
 // Authentication layout components
 import Footer from "layouts/authentication/components/Footer";
 
-// Material Dashboard 2 PRO React page layout routes
+// MD React page layout routes
 import pageRoutes from "page.routes";
 
 function CoverLayout({ coverHeight, image, children }) {

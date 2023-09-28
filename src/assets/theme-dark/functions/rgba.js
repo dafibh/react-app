@@ -3,7 +3,7 @@
   to convert the hex code into rgb for using it inside the rgba color format.
  */
 
-// Material Dashboard 2 PRO React helper functions
+// MD React helper functions
 import hexToRgb from "assets/theme-dark/functions/hexToRgb";
 
 function rgba(color, opacity) {

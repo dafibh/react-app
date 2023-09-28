@@ -10,11 +10,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDTypography from "components/MDBase/MDTypography";
 import MDBox from "components/MDBase/MDBox";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import SalesTableCell from "components/MDComponents/Tables/SalesTable/SalesTableCell";
 
 function SalesTable({ title, rows, shadow }) {

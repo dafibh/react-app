@@ -7,13 +7,13 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 
 // Custom styles for the SidenavItem
 import { item, itemContent, itemArrow } from "components/MDComponents/Sidenav/styles/sidenavItem";
 
-// Material Dashboard 2 PRO React contexts
+// MD React contexts
 import { useMaterialUIController } from "context/md";
 
 function SidenavItem({ color, name, active, nested, children, open, ...rest }) {

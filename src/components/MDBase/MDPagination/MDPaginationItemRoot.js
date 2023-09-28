@@ -1,7 +1,7 @@
 // @mui material components
 import { styled } from "@mui/material/styles";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDButton from "components/MDBase/MDButton";
 
 export default styled(MDButton)(({ theme, ownerState }) => {

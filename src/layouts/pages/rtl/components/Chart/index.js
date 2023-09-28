@@ -9,17 +9,17 @@ import { Line } from "react-chartjs-2";
 // @mui material components
 import Card from "@mui/material/Card";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
-// Material Dashboard 2 PRO React helper functions
+// MD React helper functions
 import gradientChartLine from "assets/theme/functions/gradientChartLine";
 
 // Chart configurations
 import configs from "layouts/pages/widgets/components/Chart/configs";
 
-// Material Dashboard 2 PRO React base styles
+// MD React base styles
 import colors from "assets/theme/base/colors";
 
 function Chart({ title, count, percentage, chart }) {

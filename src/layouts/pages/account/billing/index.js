@@ -1,10 +1,10 @@
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MasterCard from "components/MDComponents/Cards/MasterCard";
 import DefaultInfoCard from "components/MDComponents/Cards/InfoCards/DefaultInfoCard";
 

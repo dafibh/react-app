@@ -16,19 +16,19 @@ import Divider from "@mui/material/Divider";
 import MuiLink from "@mui/material/Link";
 import Container from "@mui/material/Container";
 
-// Material Dashboard 2 PRO React TS components
+// MD React TS components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 import MDButton from "components/MDBase/MDButton";
 
-// Material Dashboard 2 PRO React TS examples components
+// MD React TS examples components
 import DefaultNavbarDropdown from "components/MDComponents/Navbars/DefaultNavbar/DefaultNavbarDropdown";
 import DefaultNavbarMobile from "components/MDComponents/Navbars/DefaultNavbar/DefaultNavbarMobile";
 
-// Material Dashboard 2 PRO React TS Base Styles
+// MD React TS Base Styles
 import breakpoints from "assets/theme/base/breakpoints";
 
-// Material Dashboard 2 PRO React context
+// MD React context
 import { useMaterialUIController } from "context/md";
 
 function DefaultNavbar({ routes, brand, transparent, light, action }) {
@@ -565,7 +565,7 @@ function DefaultNavbar({ routes, brand, transparent, light, action }) {
 
 // Declaring default props for DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "Material Dashboard PRO",
+  brand: process.env.REACT_APP_NAME,
   transparent: false,
   light: false,
   action: false,

@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
-// Material Dashboard 2 PRO React contexts
+// MD React contexts
 import { useMaterialUIController } from "context/md";
 
 function DefaultStatisticsCard({ title, count, percentage, dropdown }) {

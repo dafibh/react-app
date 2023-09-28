@@ -4,14 +4,14 @@ import PropTypes from "prop-types";
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import DefaultNavbar from "components/MDComponents/Navbars/DefaultNavbar";
 import PageLayout from "components/MDComponents/LayoutContainers/PageLayout";
 
-// Material Dashboard 2 PRO React page layout routes
+// MD React page layout routes
 import pageRoutes from "page.routes";
 
 // Authentication pages components

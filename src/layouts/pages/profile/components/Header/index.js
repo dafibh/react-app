@@ -11,12 +11,12 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 import MDAvatar from "components/MDBase/MDAvatar";
 
-// Material Dashboard 2 PRO React base styles
+// MD React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Images

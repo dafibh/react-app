@@ -1,9 +1,9 @@
-// Material Dashboard 2 PRO React base styles
+// MD React base styles
 import colors from "assets/theme/base/colors";
 import borders from "assets/theme/base/borders";
 import boxShadows from "assets/theme/base/boxShadows";
 
-// Material Dashboard 2 PRO React helper functions
+// MD React helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { grey, white, black, info } = colors;

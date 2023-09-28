@@ -14,7 +14,7 @@ import Icon from "@mui/material/Icon";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 import MDButton from "components/MDBase/MDButton";
@@ -22,7 +22,7 @@ import MDButton from "components/MDBase/MDButton";
 // Custom styles for the Configurator
 import ConfiguratorRoot from "components/MDComponents/Configurator/ConfiguratorRoot";
 
-// Material Dashboard 2 PRO React context
+// MD React context
 import {
   useMaterialUIController,
   setOpenConfigurator,

@@ -7,12 +7,12 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 import MDButton from "components/MDBase/MDButton";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import DashboardLayout from "components/MDComponents/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "components/MDComponents/Navbars/DashboardNavbar";
 import Footer from "components/MDComponents/Footer";

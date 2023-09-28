@@ -1,7 +1,7 @@
 // prop-type is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDInput from "components/MDBase/MDInput";
 
 function FormField({ label, ...rest }) {

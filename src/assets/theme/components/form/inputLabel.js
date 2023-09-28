@@ -1,4 +1,4 @@
-// Material Dashboard 2 PRO React Base Styles
+// MD React Base Styles
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 

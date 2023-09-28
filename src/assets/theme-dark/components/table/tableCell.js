@@ -1,8 +1,8 @@
-// Material Dashboard 2 PRO React base styles
+// MD React base styles
 import borders from "assets/theme-dark/base/borders";
 import colors from "assets/theme-dark/base/colors";
 
-// Material Dashboard 2 PRO React helper functions
+// MD React helper functions
 import pxToRem from "assets/theme-dark/functions/pxToRem";
 
 const { borderWidth } = borders;

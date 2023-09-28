@@ -6,7 +6,7 @@ import Tooltip from "@mui/material/Tooltip";
 import Icon from "@mui/material/Icon";
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 import MDButton from "components/MDBase/MDButton";
@@ -16,7 +16,7 @@ import PieChart from "components/MDComponents/Charts/PieChart";
 // Data
 // import channelChartData from "layouts/dashboards/sales/components/ChannelsChart/data";
 
-// Material Dashboard 2 PRO React contexts
+// MD React contexts
 import { useMaterialUIController } from "context/md";
 
 // API

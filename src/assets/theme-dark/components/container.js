@@ -1,7 +1,7 @@
-// Material Dashboard 2 PRO React base styles
+// MD React base styles
 import breakpoints from "assets/theme-dark/base/breakpoints";
 
-// Material Dashboard 2 PRO React helper functions
+// MD React helper functions
 import pxToRem from "assets/theme-dark/functions/pxToRem";
 
 const {

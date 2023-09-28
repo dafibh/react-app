@@ -20,14 +20,14 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
 // Chart configurations
 import configs from "layouts/applications/calendar/components/ProductivityChart/configs";
 
-// Material Dashboard 2 PRO React base styles
+// MD React base styles
 import typography from "assets/theme/base/typography";
 
 ChartJS.register(

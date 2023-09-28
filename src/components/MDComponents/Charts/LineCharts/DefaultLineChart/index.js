@@ -21,14 +21,14 @@ import {
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
 // DefaultLineChart configurations
 import configs from "components/MDComponents/Charts/LineCharts/DefaultLineChart/configs";
 
-// Material Dashboard 2 PRO React base styles
+// MD React base styles
 import colors from "assets/theme/base/colors";
 
 ChartJS.register(

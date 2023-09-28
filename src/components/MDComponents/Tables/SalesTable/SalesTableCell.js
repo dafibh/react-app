@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 // @mui material components
 import TableCell from "@mui/material/TableCell";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDTypography from "components/MDBase/MDTypography";
 import MDBox from "components/MDBase/MDBox";
 

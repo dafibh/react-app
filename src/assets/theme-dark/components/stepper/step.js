@@ -1,4 +1,4 @@
-// Material Dashboard 2 PRO React helper functions
+// MD React helper functions
 import pxToRem from "assets/theme-dark/functions/pxToRem";
 
 const step = {

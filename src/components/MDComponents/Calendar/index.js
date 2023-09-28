@@ -10,14 +10,14 @@ import interactionPlugin from "@fullcalendar/interaction";
 // @mui material components
 import Card from "@mui/material/Card";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
 // Custom styles for Calendar
 import CalendarRoot from "components/MDComponents/Calendar/CalendarRoot";
 
-// Material Dashboard 2 PRO React context
+// MD React context
 import { useMaterialUIController } from "context/md";
 
 function Calendar({ header, ...rest }) {

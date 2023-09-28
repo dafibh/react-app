@@ -1,4 +1,4 @@
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDProgress from "components/MDBase/MDProgress";
 

@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 import Icon from "@mui/material/Icon";
 import Collapse from "@mui/material/Collapse";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import borders from "assets/theme/base/borders";
 
 function FaqCollapse({ title, open, children, ...rest }) {

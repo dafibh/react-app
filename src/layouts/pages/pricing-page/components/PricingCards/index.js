@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import DefaultPricingCard from "components/MDComponents/Cards/PricingCards/DefaultPricingCard";
 
-// Material Dashboard 2 PRO React context
+// MD React context
 import { useMaterialUIController } from "context/md";
 
 function PricingCards({ prices }) {

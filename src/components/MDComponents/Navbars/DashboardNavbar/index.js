@@ -13,12 +13,12 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 PRO React components
+// MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDInput from "components/MDBase/MDInput";
 import MDBadge from "components/MDBase/MDBadge";
 
-// Material Dashboard 2 PRO React examples
+// MD React examples
 import Breadcrumbs from "components/MDComponents/Breadcrumbs";
 import NotificationItem from "components/MDComponents/Items/NotificationItem";
 
@@ -32,7 +32,7 @@ import {
   navbarMobileMenu,
 } from "components/MDComponents/Navbars/DashboardNavbar/styles";
 
-// Material Dashboard 2 PRO React context
+// MD React context
 import {
   useMaterialUIController,
   setTransparentNavbar,
