@@ -32,7 +32,6 @@ import Invoice from "layouts/pages/account/invoice";
 import Timeline from "layouts/pages/projects/timeline";
 import PricingPage from "layouts/pages/pricing-page";
 import Widgets from "layouts/pages/widgets";
-import RTL from "layouts/pages/rtl";
 import Charts from "layouts/pages/charts";
 import Notifications from "layouts/pages/notifications";
 import Kanban from "layouts/applications/kanban";
@@ -186,7 +185,6 @@ const routes = [
         route: "/pages/pricing-page",
         component: <PricingPage />,
       },
-      { name: "RTL", key: "rtl", route: "/pages/rtl", component: <RTL /> },
       { name: "Widgets", key: "widgets", route: "/pages/widgets", component: <Widgets /> },
       { name: "Charts", key: "charts", route: "/pages/charts", component: <Charts /> },
       {

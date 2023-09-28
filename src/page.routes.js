@@ -56,7 +56,6 @@ const pageRoutes = [
             name: "pricing page",
             route: "/pages/pricing-page",
           },
-          { name: "RTL", route: "/pages/rtl" },
           { name: "widgets", route: "/pages/widgets" },
           { name: "charts", route: "/pages/charts" },
           {
