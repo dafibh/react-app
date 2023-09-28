@@ -42,8 +42,6 @@ export default function App() {
   const [controller, dispatch] = useMaterialUIController();
   const {
     miniSidenav,
-    direction,
-    layout,
     openConfigurator,
     sidenavColor,
     transparentSidenav,
@@ -82,11 +80,6 @@ export default function App() {
 
   // Change the openConfigurator state
   const handleConfiguratorOpen = () => setOpenConfigurator(dispatch, !openConfigurator);
-
-  // Setting the dir attribute for the body element
-  useEffect(() => {
-    document.body.setAttribute("dir", direction);
-  }, [direction]);
 
   // Setting page scroll to 0 when changing the route
   useEffect(() => {
