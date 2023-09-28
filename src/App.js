@@ -37,6 +37,10 @@ import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "co
 // Images
 import brandWhite from "assets/images/logo-ct.png";
 import brandDark from "assets/images/logo-ct-dark.png";
+import ProtectedRoutes from "./model/ProtectedRoutes";
+
+// KEY
+import { v4 as uuidv4 } from "uuid";
 
 export default function App() {
   const [controller, dispatch] = useMaterialUIController();
@@ -96,7 +100,7 @@ export default function App() {
 
       if (route.auth) {
         return (
-          <Route element={<ProtectedRoutes/>}>
+          <Route key={uuidv4()} element={<ProtectedRoutes/>}>
             <Route exact path={route.route} element={route.component} key={route.key} />
           </Route>
         );
