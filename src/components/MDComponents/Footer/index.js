@@ -77,11 +77,11 @@ function Footer({ company, links }) {
 
 // Setting default values for the props of Footer
 Footer.defaultProps = {
-  company: { href: "https://www.example.com/", name: "example.com" },
+  company: { href: process.env.REACT_APP_URL, name: process.env.REACT_APP_NAME },
   links: [
-    { href: "https://www.example.com/", name: "example.com" },
-    { href: "https://www.example.com/presentation", name: "About Us" },
-    { href: "https://www.example.com/blog", name: "Blog" },
+    { href: process.env.REACT_APP_URL, name: process.env.REACT_APP_NAME },
+    { href: `${process.env.REACT_APP_URL}/about`, name: "About Us" },
+    { href: `${process.env.REACT_APP_URL}/blog`, name: "Blog" },
   ],
 };
 
