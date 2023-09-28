@@ -1,8 +1,7 @@
 import axios from "axios";
-import config from "../config";
 
 const instance = axios.create({
-  baseURL: config.WS_BASE_URL,
+  baseURL: process.env.REACT_APP_API_URL
 });
 
 export const getAnalyticsSalesCountry = async () =>
