@@ -107,7 +107,7 @@ const routes = [
       },
     ],
   },
-  { type: "title", title: "Pages", key: "title-pages" },
+  { type: "title", title: "Pages", short: "Pages", key: "title-pages" },
   {
     type: "collapse",
     name: "Pages",
