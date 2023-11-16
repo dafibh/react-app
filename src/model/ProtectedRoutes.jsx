@@ -1,5 +1,5 @@
 import {Navigate, Outlet} from "react-router-dom";
-import SignInBasic from "layouts/authentication/sign-in/basic";
+import SignInBasic from "layouts/MD/authentication/sign-in/basic";
 
 const useAuth = () => {
   const user = { loggedIn: false };
