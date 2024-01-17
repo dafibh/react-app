@@ -17,7 +17,8 @@
   8. The `route` key is used to store the route location which is used for the react router.
   9. The `href` key is used to store the external links location.
   10. The `title` key is only for the item with the type of `title` and its used for the title text on the Sidenav.
-  10. The `component` key is used to store the component of its route.
+  11. The `component` key is used to store the component of its route.
+  12. noCollapse: true for singular route
 */
 
 // MD React layouts
