@@ -34,6 +34,7 @@ import ProtectedRoutes from "./model/ProtectedRoutes";
 
 // KEY
 import { v4 as uuidv4 } from "uuid";
+import WebSocketService from "model/WebSocketService";
 
 export default function App() {
   const [controller, dispatch] = useMaterialUIController();
@@ -48,6 +49,13 @@ export default function App() {
   } = controller;
   const [onMouseEnter, setOnMouseEnter] = useState(false);
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    WebSocketService.connect();
+    return () => {
+      WebSocketService.disconnect();
+    };
+  }, []);
 
   // Open sidenav when mouse enter on mini sidenav
   const handleOnMouseEnter = () => {
