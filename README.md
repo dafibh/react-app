@@ -1,12 +1,45 @@
-# Base_React_App
+# Base React App Template
 
-Setup
-1. clone repo
-2. navigate into base folder
-3. npm install
+#### _Setup_
+1. Use this repo as template to create a new repo
+2. Clone the new repo
+3. Navigate into base folder
+4. npm install
 
-Running Project Locally
-1. npm run start
+#### _Running Project Locally_
+`npm run start`
 
-Building Project
-1. npm run build
+#### _Building Project_
+`npm run build`
+
+####  _Installing new dependencies_
+
+`npm install library_name_here`
+
+
+## File organization
+
+Pages are arranged according to the routes <br/>
+`src/layouts/MD/...` <br/>
+
+Components are divided into two folders, <br/>
+`src/components/MDBase` _base components_ <br/>
+`src/components/MDComponents` _more complex components that may use the base components_<br/>
+
+There are also cases where a component is specific to a layout/page
+`src/components/layouts/some-section/some-page/components`
+
+
+## _Note:_
+
+Example Drag and Drop implementation <br/>
+[Pastebin](https://pastebin.com/5FjHM0tm)
+`https://pastebin.com/5FjHM0tm`
+
+Example Websocket implementation <br/>
+[Pastebin](https://pastebin.com/TJeLzwSu)
+`https://pastebin.com/TJeLzwSu`
+
+
+_The library version in the package.json is highly dependent with each other,
+Please take extra caution in modifying the version manually._
