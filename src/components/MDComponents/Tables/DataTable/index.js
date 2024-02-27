@@ -24,6 +24,16 @@ import MDPagination from "components/MDBase/MDPagination";
 import DataTableHeadCell from "components/MDComponents/Tables/DataTable/DataTableHeadCell";
 import DataTableBodyCell from "components/MDComponents/Tables/DataTable/DataTableBodyCell";
 
+/**
+ * onRowClick parameter pass in a function that have a variable as parameter
+ * the variable will be the row data
+ *
+ * const onclick = (data) => {
+ *     console.log(data);
+ * }
+ *
+ **/
+
 function DataTable({
   entriesPerPage,
   canSearch,
@@ -32,6 +42,7 @@ function DataTable({
   pagination,
   isSorted,
   noEndBorder,
+  onRowClick
 }) {
   const defaultValue = entriesPerPage.defaultValue ? entriesPerPage.defaultValue : 10;
   const entries = entriesPerPage.entries
@@ -39,6 +50,8 @@ function DataTable({
     : ["5", "10", "15", "20", "25"];
   const columns = useMemo(() => table.columns, [table]);
   const data = useMemo(() => table.rows, [table]);
+
+  const [hoveredRow, setHoveredRow] = useState(null);
 
   const tableInstance = useTable(
     {
@@ -197,7 +210,17 @@ function DataTable({
           {page.map((row, key) => {
             prepareRow(row);
             return (
-              <TableRow key={key} {...row.getRowProps()}>
+              <TableRow
+                key={key}
+                {...row.getRowProps()}
+                onClick={() => onRowClick && onRowClick(row.original)}
+                onMouseEnter={() => setHoveredRow(row.id)}
+                onMouseLeave={() => setHoveredRow(null)}
+                style={{
+                  cursor: onRowClick ? "pointer" : "default",
+                  backgroundColor: (hoveredRow === row.id && onRowClick) ? "rgba(129,139,160,0.2)" : "inherit",
+                }}
+              >
                 {row.cells.map((cell, idx) => (
                   <DataTableBodyCell
                     key={idx}
@@ -269,6 +292,7 @@ DataTable.defaultProps = {
   pagination: { variant: "gradient", color: "info" },
   isSorted: true,
   noEndBorder: false,
+  onRowClick: null,
 };
 
 // Typechecking props for the DataTable
@@ -298,6 +322,7 @@ DataTable.propTypes = {
   }),
   isSorted: PropTypes.bool,
   noEndBorder: PropTypes.bool,
+  onRowClick: PropTypes.func
 };
 
 export default DataTable;
