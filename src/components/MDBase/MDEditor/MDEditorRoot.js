@@ -18,7 +18,7 @@ export default styled("div")(({ theme, ownerState }) => {
       border: 0,
       borderBottom: `1px solid ${inputBorderColor}`,
       borderRadius: `${borderRadius.md} ${borderRadius.md} 0 0`,
-      backgroundColor: "transparent",
+      backgroundColor: "#00000000",
     },
 
     "& .rdw-option-wrapper, & .rdw-dropdown-wrapper": {

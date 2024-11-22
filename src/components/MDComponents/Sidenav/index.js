@@ -258,7 +258,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
             sx={(miniSidenav && title.length>5)?{
               background: `linear-gradient(to left, rgba(0,0,0,0), ${handleTransparentColor()})`,
               WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
+              WebkitTextFillColor: "#00000000",
             }:null}
           >
             {title}

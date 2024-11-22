@@ -18,7 +18,7 @@ function configs(color, labels, label, data) {
           pointBackgroundColor: gradients[color] ? gradients[color].main : gradients.dark.main,
           borderColor: gradients[color] ? gradients[color].main : gradients.dark.main,
           borderWidth: 4,
-          backgroundColor: "transparent",
+          backgroundColor: "#00000000",
           maxBarThickness: 6,
           fill: true,
           data,

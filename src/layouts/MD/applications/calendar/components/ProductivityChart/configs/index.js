@@ -14,7 +14,7 @@ function configs() {
           pointRadius: 0,
           borderColor: white.main,
           borderWidth: 2,
-          backgroundColor: "transparent",
+          backgroundColor: "#00000000",
           data: [50, 45, 60, 60, 80, 65, 90, 80, 100],
           maxBarThickness: 6,
           fill: true,
