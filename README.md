@@ -32,14 +32,5 @@ There are also cases where a component is specific to a layout/page
 
 ## _Note:_
 
-Example Drag and Drop implementation <br/>
-[Pastebin](https://pastebin.com/5FjHM0tm)
-`https://pastebin.com/5FjHM0tm`
-
-Example Websocket implementation <br/>
-[Pastebin](https://pastebin.com/TJeLzwSu)
-`https://pastebin.com/TJeLzwSu`
-
-
 _The library version in the package.json is highly dependent with each other,
 Please take extra caution in modifying the version manually._
