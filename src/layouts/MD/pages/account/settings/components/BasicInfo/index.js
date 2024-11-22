@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // @material-ui core components
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Autocomplete from "@mui/material/Autocomplete";
 
 // MD React components
@@ -42,15 +42,15 @@ function BasicInfo() {
       </MDBox>
       <MDBox component="form" pb={3} px={3}>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField label="First Name" placeholder="Alec" />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField label="Last Name" placeholder="Thompson" />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{xs:12}}>
             <Grid container spacing={3}>
-              <Grid item xs={12} sm={4}>
+              <Grid size={{xs:12, sm:4}}>
                 <Autocomplete
                   defaultValue="Male"
                   options={selectData.gender}
@@ -59,9 +59,9 @@ function BasicInfo() {
                   )}
                 />
               </Grid>
-              <Grid item xs={12} sm={8}>
+              <Grid size={{xs:12, sm:8}}>
                 <Grid container spacing={3}>
-                  <Grid item xs={12} sm={5}>
+                  <Grid size={{xs:12, sm:5}}>
                     <Autocomplete
                       defaultValue="February"
                       options={selectData.birthDate}
@@ -74,7 +74,7 @@ function BasicInfo() {
                       )}
                     />
                   </Grid>
-                  <Grid item xs={12} sm={4}>
+                  <Grid size={{xs:12, sm:4}}>
                     <Autocomplete
                       defaultValue="1"
                       options={selectData.days}
@@ -83,7 +83,7 @@ function BasicInfo() {
                       )}
                     />
                   </Grid>
-                  <Grid item xs={12} sm={3}>
+                  <Grid size={{xs:12, sm:3}}>
                     <Autocomplete
                       defaultValue="2021"
                       options={selectData.years}
@@ -96,34 +96,34 @@ function BasicInfo() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField
               label="Email"
               placeholder="example@email.com"
               inputProps={{ type: "email" }}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField
               label="confirmation email"
               placeholder="example@email.com"
               inputProps={{ type: "email" }}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField label="your location" placeholder="Sydney, A" />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField
               label="Phone Number"
               placeholder="+40 735 631 620"
               inputProps={{ type: "number" }}
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{xs:12, md:6}}>
             <FormField label="Language" placeholder="English" />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{xs:12, md:6}}>
             <Autocomplete
               multiple
               defaultValue={["react", "angular"]}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Card from "@mui/material/Card";
 
 // MD React components
@@ -100,7 +100,7 @@ function Notifications() {
       <DashboardNavbar />
       <MDBox mt={6} mb={3}>
         <Grid container spacing={3} justifyContent="center">
-          <Grid item xs={12} lg={8}>
+          <Grid size={{xs:12, lg:8}}>
             <Card>
               <MDBox p={2}>
                 <MDTypography variant="h5">Alerts</MDTypography>
@@ -134,7 +134,7 @@ function Notifications() {
             </Card>
           </Grid>
 
-          <Grid item xs={12} lg={8}>
+          <Grid size={{xs:12, lg:8}}>
             <Card>
               <MDBox p={2} lineHeight={0}>
                 <MDTypography variant="h5">Notifications</MDTypography>
@@ -144,25 +144,25 @@ function Notifications() {
               </MDBox>
               <MDBox p={2}>
                 <Grid container spacing={3}>
-                  <Grid item xs={12} sm={6} lg={3}>
+                  <Grid size={{xs:12, sm:6, lg:3}}>
                     <MDButton variant="gradient" color="success" onClick={openSuccessSB} fullWidth>
                       success notification
                     </MDButton>
                     {renderSuccessSB}
                   </Grid>
-                  <Grid item xs={12} sm={6} lg={3}>
+                  <Grid size={{xs:12, sm:6, lg:3}}>
                     <MDButton variant="gradient" color="info" onClick={openInfoSB} fullWidth>
                       info notification
                     </MDButton>
                     {renderInfoSB}
                   </Grid>
-                  <Grid item xs={12} sm={6} lg={3}>
+                  <Grid size={{xs:12, sm:6, lg:3}}>
                     <MDButton variant="gradient" color="warning" onClick={openWarningSB} fullWidth>
                       warning notification
                     </MDButton>
                     {renderWarningSB}
                   </Grid>
-                  <Grid item xs={12} sm={6} lg={3}>
+                  <Grid size={{xs:12, sm:6, lg:3}}>
                     <MDButton variant="gradient" color="error" onClick={openErrorSB} fullWidth>
                       error notification
                     </MDButton>

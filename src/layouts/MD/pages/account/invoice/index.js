@@ -1,5 +1,5 @@
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Card from "@mui/material/Card";
 import Table from "@mui/material/Table";
 import TableRow from "@mui/material/TableRow";
@@ -33,12 +33,12 @@ function Invoice() {
     <BaseLayout stickyNavbar>
       <MDBox mt={{ xs: 4, md: 10 }} mb={{ xs: 4, md: 8 }}>
         <Grid container justifyContent="center">
-          <Grid item xs={12} sm={10} md={8}>
+          <Grid size={{xs:12, sm:10, md:8}}>
             <Card>
               {/* Invoice header */}
               <MDBox p={3}>
                 <Grid container justifyContent="space-between">
-                  <Grid item xs={12} md={4}>
+                  <Grid size={{xs:12, md:4}}>
                     <MDBox
                       component="img"
                       src={darkMode ? logoCT : logoCTDark}
@@ -59,7 +59,7 @@ function Invoice() {
                       </MDTypography>
                     </MDBox>
                   </Grid>
-                  <Grid item xs={12} md={7} lg={3}>
+                  <Grid size={{xs:12, md:7, lg:3}}>
                     <MDBox width="100%" textAlign={{ xs: "left", md: "right" }} mt={6}>
                       <MDBox mt={1}>
                         <MDTypography variant="h6" fontWeight="medium">
@@ -80,7 +80,7 @@ function Invoice() {
                 </Grid>
                 <MDBox mt={{ xs: 5, md: 10 }}>
                   <Grid container justifyContent="space-between">
-                    <Grid item xs={12} md={4}>
+                    <Grid size={{xs:12, md:4}}>
                       <MDTypography
                         variant="h6"
                         color={darkMode ? "text" : "secondary"}
@@ -92,7 +92,7 @@ function Invoice() {
                         #0453119
                       </MDTypography>
                     </Grid>
-                    <Grid item xs={12} md={7} lg={5}>
+                    <Grid size={{xs:12, md:7, lg:5}}>
                       <MDBox
                         width="100%"
                         display="flex"
@@ -347,7 +347,7 @@ function Invoice() {
               {/* Invoice footer */}
               <MDBox p={3} mt={7}>
                 <Grid container>
-                  <Grid item xs={12} lg={5}>
+                  <Grid size={{xs:12, lg:5}}>
                     <MDTypography variant="h5" fontWeight="medium">
                       Thank you!
                     </MDTypography>
@@ -368,7 +368,7 @@ function Invoice() {
                       </MDTypography>
                     </MDTypography>
                   </Grid>
-                  <Grid item xs={12} lg={7}>
+                  <Grid size={{xs:12, lg:7}}>
                     <MDBox
                       width="100%"
                       height={{ xs: "auto", md: "100%" }}

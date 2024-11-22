@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Autocomplete from "@mui/material/Autocomplete";
 
 // MD React components
@@ -25,7 +25,7 @@ function Address({ formData }) {
       </MDTypography>
       <MDBox mt={1.625}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
+          <Grid size={{xs:12}}>
             <FormField
               type={address1.type}
               label={address1.label}
@@ -36,7 +36,7 @@ function Address({ formData }) {
               success={address1V.length > 0 && !errors.address1}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{xs:12}}>
             <MDBox mt={-1.625}>
               <FormField
                 type={address2.type}
@@ -49,7 +49,7 @@ function Address({ formData }) {
           </Grid>
         </Grid>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField
               type={city.type}
               label={city.label}
@@ -60,13 +60,13 @@ function Address({ formData }) {
               success={cityV.length > 0 && !errors.city}
             />
           </Grid>
-          <Grid item xs={6} sm={3}>
+          <Grid size={{xs:6, sm:3}}>
             <Autocomplete
               options={["State 1", "State 2", "State 3"]}
               renderInput={(params) => <MDInput {...params} variant="standard" label="State" />}
             />
           </Grid>
-          <Grid item xs={6} sm={3}>
+          <Grid size={{xs:6, sm:3}}>
             <FormField
               type={zip.type}
               label={zip.label}

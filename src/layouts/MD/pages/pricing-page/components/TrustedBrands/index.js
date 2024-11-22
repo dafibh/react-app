@@ -1,5 +1,5 @@
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -23,7 +23,7 @@ function PricingCards() {
       </MDBox>
       <MDBox mt={5} ml={{ xs: 0, lg: -8 }}>
         <Grid container spacing={4}>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid size={{xs:12, md:4, lg:2}}>
             <MDBox
               component="img"
               src={coinbase}
@@ -33,7 +33,7 @@ function PricingCards() {
               mb={3}
             />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid size={{xs:12, md:4, lg:2}}>
             <MDBox
               component="img"
               src={nasa}
@@ -43,7 +43,7 @@ function PricingCards() {
               mb={3}
             />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid size={{xs:12, md:4, lg:2}}>
             <MDBox
               component="img"
               src={netflix}
@@ -53,7 +53,7 @@ function PricingCards() {
               mb={3}
             />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid size={{xs:12, md:4, lg:2}}>
             <MDBox
               component="img"
               src={pinterest}
@@ -63,7 +63,7 @@ function PricingCards() {
               mb={3}
             />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid size={{xs:12, md:4, lg:2}}>
             <MDBox
               component="img"
               src={spotify}
@@ -73,7 +73,7 @@ function PricingCards() {
               mb={3}
             />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid size={{xs:12, md:4, lg:2}}>
             <MDBox
               component="img"
               src={vodafone}

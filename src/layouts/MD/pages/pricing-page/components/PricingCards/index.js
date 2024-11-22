@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -20,7 +20,7 @@ function PricingCards({ prices }) {
   return (
     <MDBox position="relative" zIndex={10} mt={8} px={{ xs: 1, sm: 0 }}>
       <Grid container spacing={3} justifyContent="center">
-        <Grid item xs={12} lg={4}>
+        <Grid size={{xs:12, lg:4}}>
           <DefaultPricingCard
             color={darkMode ? "dark" : "white"}
             badge={{ color: darkMode ? "warning" : "light", label: "starter" }}
@@ -42,7 +42,7 @@ function PricingCards({ prices }) {
             shadow={darkMode}
           />
         </Grid>
-        <Grid item xs={12} lg={4}>
+        <Grid size={{xs:12, lg:4}}>
           <DefaultPricingCard
             color="dark"
             badge={{ color: "info", label: "premium" }}
@@ -63,7 +63,7 @@ function PricingCards({ prices }) {
             }}
           />
         </Grid>
-        <Grid item xs={12} lg={4}>
+        <Grid size={{xs:12, lg:4}}>
           <DefaultPricingCard
             color={darkMode ? "dark" : "white"}
             badge={{ color: darkMode ? "warning" : "light", label: "enterprise" }}

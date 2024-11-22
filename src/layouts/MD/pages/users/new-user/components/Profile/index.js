@@ -2,7 +2,6 @@
 import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -10,6 +9,7 @@ import MDTypography from "components/MDBase/MDTypography";
 
 // NewUser page components
 import FormField from "layouts/MD/pages/users/new-user/components/FormField";
+import Grid from "@mui/material/Grid2";
 
 function Profile({ formData }) {
   const { formField, values } = formData;
@@ -23,7 +23,7 @@ function Profile({ formData }) {
       </MDTypography>
       <MDBox mt={1.625}>
         <Grid container spacing={1}>
-          <Grid item xs={12}>
+          <Grid size={{xs: 12}}>
             <FormField
               type={publicEmail.type}
               label={publicEmail.label}
@@ -32,7 +32,7 @@ function Profile({ formData }) {
               placeholder={publicEmail.placeholder}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{xs: 12}}>
             <FormField
               type={bio.type}
               label={bio.label}

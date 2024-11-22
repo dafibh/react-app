@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -101,7 +101,7 @@ function Charts() {
       <MDBox my={3}>
         <MDBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} sx={{ lineHeight: 0 }}>
+            <Grid size={{xs:12, md:6}} sx={{ lineHeight: 0 }}>
               <MDTypography variant="h5">Charts</MDTypography>
               <MDTypography variant="button" color="text">
                 Charts on this page use Chart.js - Simple yet flexible JavaScript charting for
@@ -112,7 +112,7 @@ function Charts() {
         </MDBox>
         <MDBox mb={6}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs:12, md:6}}>
               <DefaultLineChart
                 icon={{ component: "insights" }}
                 title="Line chart"
@@ -121,7 +121,7 @@ function Charts() {
                 chart={lineData}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs:12, md:6}}>
               <GradientLineChart
                 icon={{ component: "show_chart" }}
                 title="Line chart with gradient"
@@ -134,7 +134,7 @@ function Charts() {
         </MDBox>
         <MDBox mb={6}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs:12, md:6}}>
               <VerticalBarChart
                 icon={{ color: "dark", component: "leaderboard" }}
                 title="Bar chart"
@@ -143,7 +143,7 @@ function Charts() {
                 chart={barData}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs:12, md:6}}>
               <HorizontalBarChart
                 icon={{ color: "dark", component: "splitscreen" }}
                 title="Bar chart horizontal"
@@ -156,7 +156,7 @@ function Charts() {
         </MDBox>
         <MDBox mb={6}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs:12, md:6}}>
               <MixedChart
                 icon={{ color: "primary", component: "auto_graph" }}
                 title="Mixed chart"
@@ -165,7 +165,7 @@ function Charts() {
                 chart={mixedData}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs:12, md:6}}>
               <BubbleChart
                 icon={{ color: "primary", component: "multiline_chart" }}
                 title="Bubble chart"
@@ -178,7 +178,7 @@ function Charts() {
         </MDBox>
         <MDBox mb={6}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs:12, md:6}}>
               <DefaultDoughnutChart
                 icon={{ color: "success", component: "donut_small" }}
                 title="Doughnut chart"
@@ -187,7 +187,7 @@ function Charts() {
                 chart={doughnutData}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs:12, md:6}}>
               <PieChart
                 icon={{ color: "success", component: "donut_small" }}
                 title="Pie chart"
@@ -200,7 +200,7 @@ function Charts() {
         </MDBox>
         <MDBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs:12, md:6}}>
               <RadarChart
                 icon={{ color: "warning", component: "data_saver_on" }}
                 title="Radar chart"
@@ -209,7 +209,7 @@ function Charts() {
                 chart={radarData}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{xs:12, md:6}}>
               <PolarChart
                 icon={{ color: "warning", component: "scatter_plot" }}
                 title="Polar chart"

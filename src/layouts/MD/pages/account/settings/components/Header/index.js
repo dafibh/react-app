@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Switch from "@mui/material/Switch";
 
 // MD React components
@@ -22,10 +22,10 @@ function Header() {
     <Card id="profile">
       <MDBox p={2}>
         <Grid container spacing={3} alignItems="center">
-          <Grid item>
+          <Grid>
             <MDAvatar src={burceMars} alt="profile-image" size="xl" shadow="sm" />
           </Grid>
-          <Grid item>
+          <Grid>
             <MDBox height="100%" mt={0.5} lineHeight={1}>
               <MDTypography variant="h5" fontWeight="medium">
                 Alex Thompson
@@ -35,7 +35,7 @@ function Header() {
               </MDTypography>
             </MDBox>
           </Grid>
-          <Grid item xs={12} md={6} lg={3} sx={{ ml: "auto" }}>
+          <Grid size={{xs:12, md:6, lg:3}} sx={{ ml: "auto" }}>
             <MDBox
               display="flex"
               justifyContent={{ md: "flex-end" }}

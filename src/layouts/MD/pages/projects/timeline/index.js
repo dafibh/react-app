@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 // @mui material components teer
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -50,10 +50,10 @@ function Timeline() {
       <DashboardNavbar />
       <MDBox my={3}>
         <Grid container spacing={3}>
-          <Grid item xs={12} lg={6}>
+          <Grid size={{xs:12, lg:6}}>
             <TimelineList title="Timeline with dotted line">{renderTimelineItems}</TimelineList>
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid size={{xs:12, lg:6}}>
             <TimelineList title="Timeline with dotted line" dark>
               {renderTimelineItems}
             </TimelineList>

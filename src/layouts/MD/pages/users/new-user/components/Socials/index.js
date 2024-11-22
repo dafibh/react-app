@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -23,7 +23,7 @@ function Socials({ formData }) {
       </MDTypography>
       <MDBox mt={1.625}>
         <Grid container spacing={1}>
-          <Grid item xs={12}>
+          <Grid size={{xs:12}}>
             <FormField
               type={twitter.type}
               label={twitter.label}
@@ -34,7 +34,7 @@ function Socials({ formData }) {
               success={twitterV.length > 0 && !errors.twitter}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{xs:12}}>
             <FormField
               type={facebook.type}
               label={facebook.label}
@@ -43,7 +43,7 @@ function Socials({ formData }) {
               placeholder={facebook.placeholder}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{xs:12}}>
             <FormField
               type={instagram.type}
               label={instagram.label}

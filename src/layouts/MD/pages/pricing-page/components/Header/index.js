@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Card from "@mui/material/Card";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
@@ -55,7 +55,7 @@ function Header({ tabValue, tabHandler, children }) {
           justifyContent="center"
           sx={{ position: "relative", py: 22, textAlign: "center" }}
         >
-          <Grid item xs={11} lg={5}>
+          <Grid size={{xs:11, lg:5}}>
             <MDBox mb={1}>
               <MDTypography variant="h2" color="white" fontWeight="bold">
                 Pick the best plan for you
@@ -70,7 +70,7 @@ function Header({ tabValue, tabHandler, children }) {
         </Grid>
       </MDBox>
       <Grid container sx={{ px: 6, my: 8 }}>
-        <Grid item xs={12}>
+        <Grid size={{xs:12}}>
           <Card sx={{ mt: -16 }}>
             <MDBox minWidth={{ xs: "22rem", md: "25rem" }} mx="auto" mt={6}>
               <AppBar position="static">

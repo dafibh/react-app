@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Icon from "@mui/material/Icon";
@@ -77,7 +77,7 @@ function AllProjects() {
       <Header />
       <MDBox pb={3}>
         <Grid container alignItems="center">
-          <Grid item xs={12} md={7}>
+          <Grid size={{xs:12, md:7}}>
             <MDBox mb={1}>
               <MDTypography variant="h5">Some of Our Awesome Projects</MDTypography>
             </MDBox>
@@ -88,7 +88,7 @@ function AllProjects() {
               </MDTypography>
             </MDBox>
           </Grid>
-          <Grid item xs={12} md={5} sx={{ textAlign: "right" }}>
+          <Grid size={{xs:12, md:5}} sx={{ textAlign: "right" }}>
             <MDButton variant="gradient" color="info">
               <Icon>add</Icon>&nbsp; Add New
             </MDButton>
@@ -96,7 +96,7 @@ function AllProjects() {
         </Grid>
         <MDBox mt={5}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, md:6, lg:4}}>
               <MDBox mb={1.5} mt={1.5}>
                 <ComplexProjectCard
                   image={logoSlack}
@@ -111,7 +111,7 @@ function AllProjects() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, md:6, lg:4}}>
               <MDBox mb={1.5} mt={1.5}>
                 <ComplexProjectCard
                   image={logoSpotify}
@@ -126,7 +126,7 @@ function AllProjects() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, md:6, lg:4}}>
               <MDBox mb={1.5} mt={1.5}>
                 <ComplexProjectCard
                   image={logoXD}
@@ -141,7 +141,7 @@ function AllProjects() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, sm:6, lg:4}}>
               <MDBox mb={1.5} mt={1.5}>
                 <ComplexProjectCard
                   image={logoAsana}
@@ -156,7 +156,7 @@ function AllProjects() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, md:6, lg:4}}>
               <MDBox mb={1.5} mt={1.5}>
                 <ComplexProjectCard
                   image={logoInvision}
@@ -171,7 +171,7 @@ function AllProjects() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, md:6, lg:4}}>
               <MDBox mb={1.5} mt={1.5}>
                 <ComplexProjectCard
                   image={logoAtlassian}

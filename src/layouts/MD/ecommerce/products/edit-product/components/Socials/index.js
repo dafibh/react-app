@@ -1,6 +1,6 @@
 // @mui material components
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -18,13 +18,13 @@ function Socials() {
         </MDTypography>
         <MDBox mt={1}>
           <Grid container spacing={2}>
-            <Grid item xs={12}>
+            <Grid size={{xs:12}}>
               <FormField type="text" label="Shoppify Handle" defaultValue="@soft" />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{xs:12}}>
               <FormField type="text" label="Facebook Account" defaultValue="https://..." />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{xs:12}}>
               <FormField type="text" label="Instagram Account" defaultValue="https://..." />
             </Grid>
           </Grid>

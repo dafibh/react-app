@@ -1,5 +1,5 @@
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -21,34 +21,34 @@ function Settings() {
     <BaseLayout>
       <MDBox mt={4}>
         <Grid container spacing={3}>
-          <Grid item xs={12} lg={3}>
+          <Grid size={{xs:12, lg:3}}>
             <Sidenav />
           </Grid>
-          <Grid item xs={12} lg={9}>
+          <Grid size={{xs:12, lg:9}}>
             <MDBox mb={3}>
               <Grid container spacing={3}>
-                <Grid item xs={12}>
+                <Grid size={{xs:12}}>
                   <Header />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{xs:12}}>
                   <BasicInfo />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{xs:12}}>
                   <ChangePassword />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{xs:12}}>
                   <Authentication />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{xs:12}}>
                   <Accounts />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{xs:12}}>
                   <Notifications />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{xs:12}}>
                   <Sessions />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{xs:12}}>
                   <DeleteAccount />
                 </Grid>
               </Grid>

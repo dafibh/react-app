@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 // MD React components
 import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
@@ -15,7 +15,7 @@ function Faq() {
   return (
     <MDBox mt={8} mb={6}>
       <Grid container justifyContent="center">
-        <Grid item xs={12} md={8}>
+        <Grid size={{xs:12, md:8}}>
           <MDTypography variant="h2" align="center" fontWeight="bold" gutterBottom>
             Frequently Asked Questions
           </MDTypography>
@@ -26,7 +26,7 @@ function Faq() {
             </MDTypography>
           </MDBox>
         </Grid>
-        <Grid item xs={12} md={10}>
+        <Grid size={{xs:12, md:10}}>
           <FaqCollapse
             title="How do I order?"
             open={collapse === 1}

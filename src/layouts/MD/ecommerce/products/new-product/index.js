@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
@@ -55,7 +55,7 @@ function NewProduct() {
       <DashboardNavbar />
       <MDBox mt={5} mb={9}>
         <Grid container justifyContent="center">
-          <Grid item xs={12} lg={8}>
+          <Grid size={{xs:12, lg:8}}>
             <MDBox mt={6} mb={8} textAlign="center">
               <MDBox mb={1}>
                 <MDTypography variant="h3" fontWeight="bold">

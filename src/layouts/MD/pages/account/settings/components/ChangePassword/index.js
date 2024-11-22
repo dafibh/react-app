@@ -1,6 +1,6 @@
 // @mui material components
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -35,21 +35,21 @@ function ChangePassword() {
       </MDBox>
       <MDBox component="form" pb={3} px={3}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
+          <Grid size={{xs:12}}>
             <MDInput
               fullWidth
               label="Current Password"
               inputProps={{ type: "password", autoComplete: "" }}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{xs:12}}>
             <MDInput
               fullWidth
               label="New Password"
               inputProps={{ type: "password", autoComplete: "" }}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{xs:12}}>
             <MDInput
               fullWidth
               label="Confirm New Password"

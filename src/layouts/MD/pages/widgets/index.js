@@ -1,7 +1,7 @@
 import { useMemo, useState, useEffect } from "react";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Icon from "@mui/material/Icon";
 
 // MD React components
@@ -94,10 +94,10 @@ function Widgets() {
       <MDBox my={3}>
         <MDBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} lg={4}>
+            <Grid size={{xs:12, sm:6, lg:4}}>
               <UpcomingEvents />
             </Grid>
-            <Grid item xs={12} lg={8}>
+            <Grid size={{xs:12, lg:8}}>
               <ProgressLineChart
                 icon="date_range"
                 title="Tasks"
@@ -111,7 +111,7 @@ function Widgets() {
         </MDBox>
         <MDBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={3}>
+            <Grid size={{xs:12, md:6, lg:3}}>
               <MDBox mb={3}>
                 <MiniStatisticsCard
                   title={{ text: "battery health" }}
@@ -129,9 +129,7 @@ function Widgets() {
             </Grid>
             <Grid
               item
-              xs={12}
-              sm={3}
-              lg={5}
+              size={{xs:12, sm:3, lg:5}}
               display="flex"
               flexDirection={{ xs: "column", sm: "row" }}
             >
@@ -152,17 +150,17 @@ function Widgets() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} lg={4}>
+            <Grid size={{xs:12, lg:4}}>
               <MasterCard number={4562112245947852} holder="jack peterson" expires="11/22" />
             </Grid>
           </Grid>
         </MDBox>
         <MDBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={3}>
+            <Grid size={{xs:12, md:6, lg:3}}>
               <FullBody />
             </Grid>
-            <Grid item xs={12} md={6} lg={2}>
+            <Grid size={{xs:12, md:6, lg:2}}>
               <ControllerCard
                 state={lights}
                 icon={
@@ -174,7 +172,7 @@ function Widgets() {
                 onChange={handleSetLights}
               />
             </Grid>
-            <Grid item xs={12} lg={3}>
+            <Grid size={{xs:12, lg:3}}>
               <Chart
                 title="calories"
                 count={97}
@@ -182,7 +180,7 @@ function Widgets() {
                 chart={caloriesChartData}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={2}>
+            <Grid size={{xs:12, md:6, lg:2}}>
               <MiniInfoCard
                 icon="shortcut"
                 title={
@@ -196,13 +194,13 @@ function Widgets() {
                 description="New York City"
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={2}>
+            <Grid size={{xs:12, md:6, lg:2}}>
               <Steps />
             </Grid>
           </Grid>
         </MDBox>
         <Grid container spacing={3}>
-          <Grid item xs={12} lg={5}>
+          <Grid size={{xs:12, lg:5}}>
             {useMemo(
               () => (
                 <Calendar
@@ -218,13 +216,13 @@ function Widgets() {
               [calendarEventsData]
             )}
           </Grid>
-          <Grid item xs={12} lg={3}>
+          <Grid size={{xs:12, lg:3}}>
             <MDBox mb={3}>
               <CategoriesList title="categories" categories={categoriesListData} />
             </MDBox>
             <MediaPlayer />
           </Grid>
-          <Grid item xs={12} lg={4}>
+          <Grid size={{xs:12, lg:4}}>
             <OrdersOverview />
           </Grid>
         </Grid>

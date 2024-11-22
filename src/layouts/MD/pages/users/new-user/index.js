@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Formik, Form } from "formik";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Card from "@mui/material/Card";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -89,7 +89,7 @@ function NewUser() {
       <DashboardNavbar />
       <MDBox py={3} mb={20} height="65vh">
         <Grid container justifyContent="center" alignItems="center" sx={{ height: "100%", mt: 8 }}>
-          <Grid item xs={12} lg={8}>
+          <Grid size={{xs:12, lg:8}}>
             <Formik
               initialValues={initialValues}
               validationSchema={currentValidation}

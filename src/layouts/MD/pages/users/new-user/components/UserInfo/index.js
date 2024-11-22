@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -28,12 +28,12 @@ function UserInfo({ formData }) {
       <MDBox lineHeight={0}>
         <MDTypography variant="h5">About me</MDTypography>
         <MDTypography variant="button" color="text">
-          Mandatory informations
+          Mandatory information
         </MDTypography>
       </MDBox>
       <MDBox mt={1.625}>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField
               type={firstName.type}
               label={firstName.label}
@@ -44,7 +44,7 @@ function UserInfo({ formData }) {
               success={firstNameV.length > 0 && !errors.firstName}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField
               type={lastName.type}
               label={lastName.label}
@@ -57,7 +57,7 @@ function UserInfo({ formData }) {
           </Grid>
         </Grid>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField
               type={company.type}
               label={company.label}
@@ -66,7 +66,7 @@ function UserInfo({ formData }) {
               placeholder={company.placeholder}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField
               type={email.type}
               label={email.label}
@@ -79,7 +79,7 @@ function UserInfo({ formData }) {
           </Grid>
         </Grid>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField
               type={password.type}
               label={password.label}
@@ -91,7 +91,7 @@ function UserInfo({ formData }) {
               inputProps={{ autoComplete: "" }}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField
               type={repeatPassword.type}
               label={repeatPassword.label}

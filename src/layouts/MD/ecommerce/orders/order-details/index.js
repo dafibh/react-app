@@ -1,5 +1,5 @@
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
 
@@ -25,7 +25,7 @@ function OrderDetails() {
       <DashboardNavbar />
       <MDBox my={6}>
         <Grid container spacing={3} justifyContent="center">
-          <Grid item xs={12} lg={8}>
+          <Grid size={{xs:12, lg:8}}>
             <Card>
               <MDBox pt={2} px={2}>
                 <Header />
@@ -38,16 +38,16 @@ function OrderDetails() {
                 <Divider />
                 <MDBox mt={3}>
                   <Grid container spacing={3}>
-                    <Grid item xs={12} md={6} lg={3}>
+                    <Grid size={{xs:12, md:6, lg:3}}>
                       <TrackOrder />
                     </Grid>
-                    <Grid item xs={12} md={6} lg={5}>
+                    <Grid size={{xs:12, md:6, lg:5}}>
                       <PaymentDetails />
                       <MDBox mt={3}>
                         <BillingInformation />
                       </MDBox>
                     </Grid>
-                    <Grid item xs={12} lg={3} sx={{ ml: "auto" }}>
+                    <Grid size={{xs:12, lg:3}} sx={{ ml: "auto" }}>
                       <OrderSummary />
                     </Grid>
                   </Grid>

@@ -1,6 +1,6 @@
 // @mui material components
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Icon from "@mui/material/Icon";
 import Tooltip from "@mui/material/Tooltip";
 
@@ -33,7 +33,7 @@ function PaymentMethod() {
       </MDBox>
       <MDBox p={2}>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+          <Grid size={{xs:12, md:6}}>
             <MDBox
               borderRadius="lg"
               display="flex"
@@ -58,7 +58,7 @@ function PaymentMethod() {
               </MDBox>
             </MDBox>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{xs:12, md:6}}>
             <MDBox
               borderRadius="lg"
               display="flex"

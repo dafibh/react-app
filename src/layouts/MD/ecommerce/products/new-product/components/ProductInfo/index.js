@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Autocomplete from "@mui/material/Autocomplete";
 
 // MD React components
@@ -19,17 +19,17 @@ function ProductInfo() {
       <MDTypography variant="h5">Product Information</MDTypography>
       <MDBox mt={3}>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField type="text" label="Name" />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <FormField type="text" label="Weight" />
           </Grid>
         </Grid>
       </MDBox>
       <MDBox mt={2}>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <MDBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
               <MDTypography component="label" variant="button" fontWeight="regular" color="text">
                 Description&nbsp;&nbsp;
@@ -40,7 +40,7 @@ function ProductInfo() {
             </MDBox>
             <MDEditor />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{xs:12, sm:6}}>
             <MDBox mb={3}>
               <MDBox mb={2} display="inline-block">
                 <MDTypography

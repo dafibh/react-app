@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -51,7 +51,7 @@ function BaseLayout({ stickyNavbar, children }) {
       <DashboardNavbar absolute={!stickyNavbar} isMini />
       <MDBox mt={stickyNavbar ? 3 : 10}>
         <Grid container>
-          <Grid item xs={12} sm={8} lg={4}>
+          <Grid size={{xs:12, sm:8, lg:4}}>
             <AppBar position="static">
               <Tabs orientation={tabsOrientation} value={tabValue} onChange={handleSetTabValue}>
                 <Tab label="Messages" />
