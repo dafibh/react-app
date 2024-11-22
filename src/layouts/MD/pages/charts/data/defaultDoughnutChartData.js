@@ -1,5 +1,5 @@
 const defaultDoughnutChartData = {
-  labels: ["Creative Tim", "Github", "Bootsnipp", "Dev.to", "Codeinwp"],
+  labels: ["Yuber", "Github", "Bootsnipp", "Dev.to", "Codeinwp"],
   datasets: {
     label: "Projects",
     backgroundColors: ["info", "dark", "error", "secondary", "primary"],
