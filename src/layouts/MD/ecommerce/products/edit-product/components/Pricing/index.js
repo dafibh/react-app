@@ -1,6 +1,6 @@
 // @mui material components
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Autocomplete from "@mui/material/Autocomplete";
 
 // MD React components
@@ -20,24 +20,24 @@ function Pricing() {
         </MDTypography>
         <MDBox mt={1}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={3}>
+            <Grid size={{xs:12, sm:3}}>
               <FormField type="number" label="Price" defaultValue="99.00" />
             </Grid>
-            <Grid item xs={12} sm={4} sx={{ mt: 2 }}>
+            <Grid size={{xs:12, sm:4}} sx={{ mt: 2 }}>
               <Autocomplete
                 defaultValue="USD"
                 options={["BTC", "CNY", "EUR", "GBP", "INR", "USD"]}
                 renderInput={(params) => <MDInput {...params} variant="standard" />}
               />
             </Grid>
-            <Grid item xs={12} sm={5}>
+            <Grid size={{xs:12, sm:5}}>
               <FormField type="text" label="SKU" defaultValue="71283476591" />
             </Grid>
           </Grid>
         </MDBox>
         <MDBox mt={1}>
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={{xs:12}}>
               <MDBox my={2} display="inline-block">
                 <MDTypography component="label" variant="button" fontWeight="regular" color="text">
                   Tags

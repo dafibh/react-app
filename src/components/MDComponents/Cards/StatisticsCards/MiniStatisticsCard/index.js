@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Icon from "@mui/material/Icon";
 
 // MD React components
@@ -29,7 +29,7 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
         <MDBox p={2}>
           <Grid container alignItems="center">
             {direction === "left" ? (
-              <Grid item xs={4}>
+              <Grid size={{xs:4}}>
                 <MDBox
                   variant="gradient"
                   bgColor={bgColor === "white" ? icon.color : "white"}
@@ -48,7 +48,7 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
                 </MDBox>
               </Grid>
             ) : null}
-            <Grid item xs={8}>
+            <Grid size={{xs:8}}>
               <MDBox
                 ml={direction === "left" ? 2 : 0}
                 lineHeight={1}
@@ -76,7 +76,7 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
               </MDBox>
             </Grid>
             {direction === "right" ? (
-              <Grid item xs={4}>
+              <Grid size={{xs:4}}>
                 <MDBox
                   variant="gradient"
                   bgColor={bgColor === "white" ? icon.color : "white"}

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -20,7 +20,7 @@ function DefaultStatisticsCard({ title, count, percentage, dropdown }) {
     <Card>
       <MDBox p={2}>
         <Grid container>
-          <Grid item xs={7}>
+          <Grid size={{xs:7}}>
             <MDBox mb={0.5} lineHeight={1}>
               <MDTypography
                 variant="button"
@@ -47,7 +47,7 @@ function DefaultStatisticsCard({ title, count, percentage, dropdown }) {
               </MDTypography>
             </MDBox>
           </Grid>
-          <Grid item xs={5}>
+          <Grid size={{xs:5}}>
             {dropdown && (
               <MDBox width="100%" textAlign="right" lineHeight={1}>
                 <MDTypography

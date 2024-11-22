@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Card from "@mui/material/Card";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -52,7 +52,7 @@ function Wizard() {
       <DashboardNavbar />
       <MDBox pt={3} pb={8}>
         <Grid container justifyContent="center" sx={{ my: 4 }}>
-          <Grid item xs={12} lg={8}>
+          <Grid size={{xs:12, lg:8}}>
             <MDBox mt={6} mb={8} textAlign="center">
               <MDBox mb={1}>
                 <MDTypography variant="h3" fontWeight="bold">

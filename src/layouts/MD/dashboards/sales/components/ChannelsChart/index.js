@@ -49,7 +49,7 @@ function ChannelsChart() {
       </MDBox>
       <MDBox mt={3}>
         <Grid container alignItems="center">
-          <Grid item size={{xs:7}}>
+          <Grid size={{xs:7}}>
             <PieChart chart={channelData} height="12.5rem" />
           </Grid>
           <Grid size={{xs:5}}>

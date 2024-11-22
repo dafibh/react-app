@@ -1,5 +1,5 @@
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -24,16 +24,16 @@ function Address() {
       </MDBox>
       <MDBox mt={2}>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={8}>
+          <Grid size={{xs:12, md:8}}>
             <FormField type="text" label="Street Name" InputLabelProps={{ shrink: true }} />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{xs:12, md:4}}>
             <FormField type="number" label="Street Number" InputLabelProps={{ shrink: true }} />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid size={{xs:12, md:7}}>
             <FormField type="text" label="City" InputLabelProps={{ shrink: true }} />
           </Grid>
-          <Grid item xs={12} md={5}>
+          <Grid size={{xs:12, md:5}}>
             <FormField type="text" label="Country" InputLabelProps={{ shrink: true }} />
           </Grid>
         </Grid>

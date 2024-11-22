@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -73,10 +73,10 @@ function ProductPage() {
             </MDBox>
 
             <Grid container spacing={3}>
-              <Grid item xs={12} lg={6} xl={5}>
+              <Grid size={{xs:12, lg:6, xl:5}}>
                 <ProductImages />
               </Grid>
-              <Grid item xs={12} lg={5} sx={{ mx: "auto" }}>
+              <Grid size={{xs:12, lg:5}} sx={{ mx: "auto" }}>
                 <ProductInfo />
               </Grid>
             </Grid>

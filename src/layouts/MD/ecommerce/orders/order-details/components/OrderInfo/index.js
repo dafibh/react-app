@@ -1,5 +1,5 @@
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -14,7 +14,7 @@ import orderImage from "assets/images/product-12.jpg";
 function OrderInfo() {
   return (
     <Grid container spacing={3} alignItems="center">
-      <Grid item xs={12} md={6}>
+      <Grid size={{xs:12, md:6}}>
         <MDBox display="flex" alignItems="center">
           <MDBox mr={2}>
             <MDAvatar size="xxl" src={orderImage} alt="Gold Glasses" />
@@ -38,7 +38,7 @@ function OrderInfo() {
           </MDBox>
         </MDBox>
       </Grid>
-      <Grid item xs={12} md={6} sx={{ textAlign: "right" }}>
+      <Grid size={{xs:12, md:6}} sx={{ textAlign: "right" }}>
         <MDButton variant="gradient" color="dark" size="small">
           contact us
         </MDButton>

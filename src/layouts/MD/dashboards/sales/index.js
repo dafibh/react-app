@@ -6,7 +6,7 @@ import RefundsCell from "layouts/MD/dashboards/sales/components/RefundsCell";
 import DefaultCell from "layouts/MD/dashboards/sales/components/DefaultCell";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Tooltip from "@mui/material/Tooltip";
@@ -138,7 +138,7 @@ function Sales() {
       <MDBox py={3}>
         <MDBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={4}>
+            <Grid size={{xs:12, sm:4}}>
               <DefaultStatisticsCard
                 title="sales"
                 count="$230,220"
@@ -154,7 +154,7 @@ function Sales() {
                 }}
               />
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid size={{xs:12, sm:4}}>
               <DefaultStatisticsCard
                 title="customers"
                 count="3.200"
@@ -170,7 +170,7 @@ function Sales() {
                 }}
               />
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid size={{xs:12, sm:4}}>
               <DefaultStatisticsCard
                 title="avg. revenue"
                 count="$1.200"
@@ -190,10 +190,10 @@ function Sales() {
         </MDBox>
         <MDBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} lg={4}>
+            <Grid size={{xs:12, sm:6, lg:4}}>
               <ChannelsChart />
             </Grid>
-            <Grid item xs={12} sm={6} lg={8}>
+            <Grid size={{xs:12, sm:6,lg:8}}>
               <DefaultLineChart
                 title="Revenue"
                 description={
@@ -224,16 +224,16 @@ function Sales() {
         </MDBox>
         <MDBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} lg={8}>
+            <Grid size={{xs:12, lg:8}}>
               <HorizontalBarChart title="Sales by age" chart={salesByAgeData} />
             </Grid>
-            <Grid item xs={12} lg={4}>
+            <Grid size={{xs:12, lg:4}}>
               <SalesTable title="Sales by Country" rows={salesByCountryData} />
             </Grid>
           </Grid>
         </MDBox>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
+          <Grid size={{xs:12}}>
             <Card>
               <MDBox pt={3} px={3}>
                 <MDTypography variant="h6" fontWeight="medium">

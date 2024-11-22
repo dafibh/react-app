@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Icon from "@mui/material/Icon";
 
 // MD React components
@@ -60,7 +60,7 @@ function Account() {
       </MDBox>
       <MDBox mt={2}>
         <Grid container spacing={3} justifyContent="center">
-          <Grid item xs={12} sm={3}>
+          <Grid size={{xs:12, sm:3}}>
             <MDBox textAlign="center">
               <MDButton
                 color="info"
@@ -75,7 +75,7 @@ function Account() {
               </MDTypography>
             </MDBox>
           </Grid>
-          <Grid item xs={12} sm={3}>
+          <Grid size={{xs:12, sm:3}}>
             <MDBox textAlign="center">
               <MDButton
                 color="info"
@@ -90,7 +90,7 @@ function Account() {
               </MDTypography>
             </MDBox>
           </Grid>
-          <Grid item xs={12} sm={3}>
+          <Grid size={{xs:12, sm:3}}>
             <MDBox textAlign="center">
               <MDButton
                 color="info"

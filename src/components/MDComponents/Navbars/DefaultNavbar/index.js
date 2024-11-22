@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import Icon from "@mui/material/Icon";
 import Popper from "@mui/material/Popper";
 import Grow from "@mui/material/Grow";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Divider from "@mui/material/Divider";
 import MuiLink from "@mui/material/Link";
 import Container from "@mui/material/Container";
@@ -117,7 +117,7 @@ function DefaultNavbar({ routes, brand, transparent, light, action }) {
             const dividerKey = `divider-${key}`;
 
             return (
-              <Grid key={gridKey} item xs={12 / columns} sx={{ position: "relative" }}>
+              <Grid key={gridKey} size={{xs:12/columns}} sx={{ position: "relative" }}>
                 {cols.map((col, index) => (
                   <Fragment key={col.name}>
                     <MDBox
