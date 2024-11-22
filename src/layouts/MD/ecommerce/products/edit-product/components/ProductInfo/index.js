@@ -1,7 +1,5 @@
-import { useState } from "react";
-
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Card from "@mui/material/Card";
 import Autocomplete from "@mui/material/Autocomplete";
 
@@ -15,42 +13,36 @@ import MDInput from "components/MDBase/MDInput";
 import FormField from "layouts/MD/ecommerce/products/edit-product/components/FormField";
 
 function ProductInfo() {
-  const [editorValue, setEditorValue] = useState(
-    `<p>
-      Long sleeves black denim jacket with a twisted design. Contrast stitching. Button up closure. White arrow prints on the back.
-    </p>`
-  );
-
   return (
     <Card>
       <MDBox p={3}>
         <MDTypography variant="h5">Product Information</MDTypography>
         <MDBox mt={1}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{xs:12, sm:6}}>
               <FormField type="text" label="Name" defaultValue="Minimal Bar Stool" />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{xs:12, sm:6}}>
               <FormField type="number" label="Weight" defaultValue={2} />
             </Grid>
           </Grid>
         </MDBox>
         <MDBox mt={1}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={3}>
+            <Grid size={{xs:12, sm:3}}>
               <FormField type="text" label="Collection" defaultValue="Summer" />
             </Grid>
-            <Grid item xs={12} sm={3}>
+            <Grid size={{xs:12, sm:3}}>
               <FormField type="text" label="Price" defaultValue="$90" />
             </Grid>
-            <Grid item xs={12} sm={3}>
+            <Grid size={{xs:12, sm:3}}>
               <FormField type="number" label="Quantity" defaultValue={50} />
             </Grid>
           </Grid>
         </MDBox>
         <MDBox mt={1}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{xs:12, sm:6}}>
               <MDBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
                 <MDTypography component="label" variant="button" fontWeight="regular" color="text">
                   Description&nbsp;&nbsp;
@@ -61,7 +53,7 @@ function ProductInfo() {
               </MDBox>
               <MDEditor />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{xs:12, sm:6}}>
               <MDBox mb={3}>
                 <MDBox mb={1.625} display="inline-block">
                   <MDTypography

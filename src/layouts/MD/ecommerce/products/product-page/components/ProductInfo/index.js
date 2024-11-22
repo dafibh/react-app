@@ -1,5 +1,5 @@
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Icon from "@mui/material/Icon";
 import Autocomplete from "@mui/material/Autocomplete";
 
@@ -65,7 +65,7 @@ function ProductInfo() {
       </MDBox>
       <MDBox mt={3}>
         <Grid container spacing={3}>
-          <Grid item xs={12} lg={5}>
+          <Grid size={{xs:12, lg:5}}>
             <MDBox mb={1.5} lineHeight={0} display="inline-block">
               <MDTypography component="label" variant="button" color="text" fontWeight="regular">
                 Frame Material
@@ -77,7 +77,7 @@ function ProductInfo() {
               renderInput={(params) => <MDInput {...params} variant="standard" />}
             />
           </Grid>
-          <Grid item xs={12} lg={5}>
+          <Grid size={{xs:12, lg:5}}>
             <MDBox mb={1.5} lineHeight={0} display="inline-block">
               <MDTypography component="label" variant="button" color="text" fontWeight="regular">
                 Color
@@ -89,7 +89,7 @@ function ProductInfo() {
               renderInput={(params) => <MDInput {...params} variant="standard" />}
             />
           </Grid>
-          <Grid item xs={12} lg={2}>
+          <Grid size={{xs:12, lg:2}}>
             <MDBox mb={1.5} lineHeight={0} display="inline-block">
               <MDTypography component="label" variant="button" color="text" fontWeight="regular">
                 Quantity
@@ -100,11 +100,9 @@ function ProductInfo() {
         </Grid>
       </MDBox>
       <MDBox mt={3}>
-        <Grid item xs={12} lg={5} container>
-          <MDButton variant="gradient" color="info" fullWidth>
-            add to cart
-          </MDButton>
-        </Grid>
+        <MDButton variant="gradient" color="info" fullWidth>
+          add to cart
+        </MDButton>
       </MDBox>
     </MDBox>
   );

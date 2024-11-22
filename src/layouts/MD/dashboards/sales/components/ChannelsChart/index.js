@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import Tooltip from "@mui/material/Tooltip";
 import Icon from "@mui/material/Icon";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -49,10 +49,10 @@ function ChannelsChart() {
       </MDBox>
       <MDBox mt={3}>
         <Grid container alignItems="center">
-          <Grid item xs={7}>
+          <Grid item size={{xs:7}}>
             <PieChart chart={channelData} height="12.5rem" />
           </Grid>
-          <Grid item xs={5}>
+          <Grid size={{xs:5}}>
             <MDBox pr={1}>
               <MDBox mb={1}>
                 <MDBadgeDot color="info" size="sm" badgeContent="Facebook" />

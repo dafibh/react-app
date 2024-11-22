@@ -1,5 +1,5 @@
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -24,7 +24,7 @@ function EditProduct() {
       <MDBox my={3}>
         <MDBox mb={6}>
           <Grid container spacing={3} alignItems="center">
-            <Grid item xs={12} lg={6}>
+            <Grid size={{xs:12, lg:6}}>
               <MDTypography variant="h4" fontWeight="medium">
                 Make the changes below
               </MDTypography>
@@ -35,7 +35,7 @@ function EditProduct() {
                 </MDTypography>
               </MDBox>
             </Grid>
-            <Grid item xs={12} lg={6}>
+            <Grid size={{xs:12, lg:6}}>
               <MDBox display="flex" justifyContent="flex-end">
                 <MDButton variant="gradient" color="info">
                   save
@@ -45,16 +45,16 @@ function EditProduct() {
           </Grid>
         </MDBox>
         <Grid container spacing={3}>
-          <Grid item xs={12} lg={4}>
+          <Grid size={{xs:12, lg:4}}>
             <ProductImage />
           </Grid>
-          <Grid item xs={12} lg={8}>
+          <Grid size={{xs:12, lg:8}}>
             <ProductInfo />
           </Grid>
-          <Grid item xs={12} lg={4}>
+          <Grid size={{xs:12, lg:4}}>
             <Socials />
           </Grid>
-          <Grid item xs={12} lg={8}>
+          <Grid size={{xs:12, lg:6}}>
             <Pricing />
           </Grid>
         </Grid>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Tooltip from "@mui/material/Tooltip";
 import Icon from "@mui/material/Icon";
 
@@ -87,7 +87,7 @@ function Analytics() {
         </Grid>
         <MDBox mt={6}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, md:6, lg:4}}>
               <MDBox mb={3}>
                 <ReportsBarChart
                   color="info"
@@ -98,7 +98,7 @@ function Analytics() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, md:6, lg:4}}>
               <MDBox mb={3}>
                 <ReportsLineChart
                   color="success"
@@ -113,7 +113,7 @@ function Analytics() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, md:6, lg:4}}>
               <MDBox mb={3}>
                 <ReportsLineChart
                   color="dark"
@@ -128,7 +128,7 @@ function Analytics() {
         </MDBox>
         <MDBox mt={1.5}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={3}>
+            <Grid size={{xs:12, md:6, lg:3}}>
               <MDBox mb={1.5}>
                 <ComplexStatisticsCard
                   color="dark"
@@ -143,7 +143,7 @@ function Analytics() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={3}>
+            <Grid size={{xs:12, md:6, lg:3}}>
               <MDBox mb={1.5}>
                 <ComplexStatisticsCard
                   icon="leaderboard"
@@ -157,7 +157,7 @@ function Analytics() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={3}>
+            <Grid size={{xs:12, md:6, lg:3}}>
               <MDBox mb={1.5}>
                 <ComplexStatisticsCard
                   color="success"
@@ -172,7 +172,7 @@ function Analytics() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={3}>
+            <Grid size={{xs:12, md:6, lg:3}}>
               <MDBox mb={1.5}>
                 <ComplexStatisticsCard
                   color="primary"
@@ -191,7 +191,7 @@ function Analytics() {
         </MDBox>
         <MDBox mt={2}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, md:6, lg:4}}>
               <MDBox mt={3}>
                 <BookingCard
                   image={booking1}
@@ -203,7 +203,7 @@ function Analytics() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, md:6, lg:4}}>
               <MDBox mt={3}>
                 <BookingCard
                   image={booking2}
@@ -215,7 +215,7 @@ function Analytics() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid size={{xs:12, md:6, lg:4}}>
               <MDBox mt={3}>
                 <BookingCard
                   image={booking3}

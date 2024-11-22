@@ -1,5 +1,5 @@
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Icon from "@mui/material/Icon";
 import Tooltip from "@mui/material/Tooltip";
 
@@ -31,7 +31,7 @@ function About() {
       </MDBox>
       <MDBox mt={2}>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={4} container justifyContent="center">
+          <Grid size={{xs:12, sm:4}} justifyContent="center">
             <MDBox position="relative" height="max-content" mx="auto">
               <MDAvatar src={team2} alt="profile picture" size="xxl" variant="rounded" />
               <MDBox alt="spotify logo" position="absolute" right={0} bottom={0} mr={-1} mb={-1}>
@@ -43,7 +43,7 @@ function About() {
               </MDBox>
             </MDBox>
           </Grid>
-          <Grid item xs={12} sm={8}>
+          <Grid size={{xs:12, sm:8}}>
             <MDBox mb={2}>
               <FormField type="text" label="First Name" />
             </MDBox>

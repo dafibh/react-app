@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -39,7 +39,7 @@ function IllustrationLayout({ header, title, description, illustration, children
             darkMode ? background.default : white.main,
         }}
       >
-        <Grid item xs={12} lg={6}>
+        <Grid size={{xs:12, lg:6}}>
           <MDBox
             display={{ xs: "none", lg: "flex" }}
             width="calc(100% - 2rem)"
@@ -50,7 +50,7 @@ function IllustrationLayout({ header, title, description, illustration, children
             sx={{ backgroundImage: `url(${illustration})` }}
           />
         </Grid>
-        <Grid item xs={11} sm={8} md={6} lg={4} xl={3} sx={{ mx: "auto" }}>
+        <Grid size={{xs:11, sm:8, md:6, lg:4, xl:3}} sx={{ mx: "auto" }}>
           <MDBox display="flex" flexDirection="column" justifyContent="center" height="100vh">
             <MDBox py={3} px={3} textAlign="center">
               {!header ? (

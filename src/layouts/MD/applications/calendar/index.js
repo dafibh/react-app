@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 // MD React components
 import MDBox from "components/MDBase/MDBox";
@@ -42,7 +42,7 @@ function Calendar() {
           <Header />
         </MDBox>
         <Grid container spacing={3}>
-          <Grid item xs={12} xl={9} sx={{ height: "max-content" }}>
+          <Grid size={{xs:12, xl:9}} sx={{ height: "max-content" }}>
             {useMemo(
               () => (
                 <EventCalendar
@@ -56,7 +56,7 @@ function Calendar() {
               [calendarEventsData]
             )}
           </Grid>
-          <Grid item xs={12} xl={3}>
+          <Grid size={{xs:12, xl:3}}>
             <MDBox mb={3}>
               <NextEvents />
             </MDBox>
