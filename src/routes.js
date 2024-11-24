@@ -29,64 +29,26 @@ import AllProjects from "layouts/MD/pages/profile/all-projects";
 import NewUser from "layouts/MD/pages/users/new-user";
 import Settings from "layouts/MD/pages/account/settings";
 import Billing from "layouts/MD/pages/account/billing";
-import Invoice from "layouts/MD/pages/account/invoice";
 import Timeline from "layouts/MD/pages/projects/timeline";
 import PricingPage from "layouts/MD/pages/pricing-page";
 import Widgets from "layouts/MD/pages/widgets";
 import Charts from "layouts/MD/pages/charts";
-import Notifications from "layouts/MD/pages/notifications";
-import Kanban from "layouts/MD/applications/kanban";
 import Wizard from "layouts/MD/applications/wizard";
 import DataTables from "layouts/MD/applications/data-tables";
 import Calendar from "layouts/MD/applications/calendar";
 import NewProduct from "layouts/MD/ecommerce/products/new-product";
 import EditProduct from "layouts/MD/ecommerce/products/edit-product";
 import ProductPage from "layouts/MD/ecommerce/products/product-page";
-import OrderList from "layouts/MD/ecommerce/orders/order-list";
-import OrderDetails from "layouts/MD/ecommerce/orders/order-details";
 import SignInBasic from "layouts/MD/authentication/sign-in/basic";
 import SignInCover from "layouts/MD/authentication/sign-in/cover";
 import SignInIllustration from "layouts/MD/authentication/sign-in/illustration";
 import SignUpCover from "layouts/MD/authentication/sign-up/cover";
 import ResetCover from "layouts/MD/authentication/reset-password/cover";
 
-// MD React components
-import MDAvatar from "components/MDBase/MDAvatar";
-
 // @mui icons
 import Icon from "@mui/material/Icon";
 
-// Images
-import profilePicture from "assets/images/team-3.jpg";
-
 const routes = [
-  {
-    type: "collapse",
-    name: "Brooklyn Alice",
-    key: "brooklyn-alice",
-    icon: <MDAvatar src={profilePicture} alt="Brooklyn Alice" size="sm" />,
-    collapse: [
-      {
-        name: "My Profile",
-        key: "my-profile",
-        route: "/pages/profile/profile-overview",
-        component: <ProfileOverview />,
-      },
-      {
-        name: "Settings",
-        key: "profile-settings",
-        route: "/pages/account/settings",
-        component: <Settings />,
-      },
-      {
-        name: "Logout",
-        key: "logout",
-        route: "/authentication/sign-in/basic",
-        component: <SignInBasic />,
-      },
-    ],
-  },
-  { type: "divider", key: "divider-0" },
   {
     type: "collapse",
     name: "Dashboards",
@@ -160,12 +122,6 @@ const routes = [
             route: "/pages/account/billing",
             component: <Billing />,
           },
-          {
-            name: "Invoice",
-            key: "invoice",
-            route: "/pages/account/invoice",
-            component: <Invoice />,
-          },
         ],
       },
       {
@@ -188,12 +144,6 @@ const routes = [
       },
       { name: "Widgets", key: "widgets", route: "/pages/widgets", component: <Widgets /> },
       { name: "Charts", key: "charts", route: "/pages/charts", component: <Charts /> },
-      {
-        name: "Notfications",
-        key: "notifications",
-        route: "/pages/notifications",
-        component: <Notifications />,
-      },
     ],
   },
   {
@@ -202,12 +152,6 @@ const routes = [
     key: "applications",
     icon: <Icon fontSize="medium">apps</Icon>,
     collapse: [
-      {
-        name: "Kanban",
-        key: "kanban",
-        route: "/applications/kanban",
-        component: <Kanban />,
-      },
       {
         name: "Wizard",
         key: "wizard",
@@ -255,24 +199,6 @@ const routes = [
             key: "product-page",
             route: "/ecommerce/products/product-page",
             component: <ProductPage />,
-          },
-        ],
-      },
-      {
-        name: "Orders",
-        key: "orders",
-        collapse: [
-          {
-            name: "Order List",
-            key: "order-list",
-            route: "/ecommerce/orders/order-list",
-            component: <OrderList />,
-          },
-          {
-            name: "Order Details",
-            key: "order-details",
-            route: "/ecommerce/orders/order-details",
-            component: <OrderDetails />,
           },
         ],
       },
