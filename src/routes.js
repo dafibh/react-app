@@ -26,19 +26,15 @@ import Analytics from "layouts/MD/dashboards/analytics";
 import Sales from "layouts/MD/dashboards/sales";
 import ProfileOverview from "layouts/MD/pages/profile/profile-overview";
 import AllProjects from "layouts/MD/pages/profile/all-projects";
-import NewUser from "layouts/MD/pages/users/new-user";
 import Settings from "layouts/MD/pages/account/settings";
 import Billing from "layouts/MD/pages/account/billing";
 import Timeline from "layouts/MD/pages/projects/timeline";
-import PricingPage from "layouts/MD/pages/pricing-page";
 import Widgets from "layouts/MD/pages/widgets";
 import Charts from "layouts/MD/pages/charts";
-import Wizard from "layouts/MD/applications/wizard";
 import DataTables from "layouts/MD/applications/data-tables";
 import Calendar from "layouts/MD/applications/calendar";
 import NewProduct from "layouts/MD/ecommerce/products/new-product";
 import EditProduct from "layouts/MD/ecommerce/products/edit-product";
-import ProductPage from "layouts/MD/ecommerce/products/product-page";
 import SignInBasic from "layouts/MD/authentication/sign-in/basic";
 import SignInCover from "layouts/MD/authentication/sign-in/cover";
 import SignInIllustration from "layouts/MD/authentication/sign-in/illustration";
@@ -95,18 +91,6 @@ const routes = [
         ],
       },
       {
-        name: "Users",
-        key: "users",
-        collapse: [
-          {
-            name: "New User",
-            key: "new-user",
-            route: "/pages/users/new-user",
-            component: <NewUser />,
-          },
-        ],
-      },
-      {
         name: "Account",
         key: "account",
         collapse: [
@@ -136,12 +120,6 @@ const routes = [
           },
         ],
       },
-      {
-        name: "Pricing Page",
-        key: "pricing-page",
-        route: "/pages/pricing-page",
-        component: <PricingPage />,
-      },
       { name: "Widgets", key: "widgets", route: "/pages/widgets", component: <Widgets /> },
       { name: "Charts", key: "charts", route: "/pages/charts", component: <Charts /> },
     ],
@@ -152,12 +130,6 @@ const routes = [
     key: "applications",
     icon: <Icon fontSize="medium">apps</Icon>,
     collapse: [
-      {
-        name: "Wizard",
-        key: "wizard",
-        route: "/applications/wizard",
-        component: <Wizard />,
-      },
       {
         name: "Data Tables",
         key: "data-tables",
@@ -193,12 +165,6 @@ const routes = [
             key: "edit-product",
             route: "/ecommerce/products/edit-product",
             component: <EditProduct />,
-          },
-          {
-            name: "Product Page",
-            key: "product-page",
-            route: "/ecommerce/products/product-page",
-            component: <ProductPage />,
           },
         ],
       },

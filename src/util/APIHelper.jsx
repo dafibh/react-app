@@ -4,9 +4,6 @@ const instance = axios.create({
   baseURL: process.env.REACT_APP_API_URL
 });
 
-export const getAnalyticsSalesCountry = async () =>
-  instance.get("/dashboard/analytics/salesbycountry");
-
 export const getAnalyticsWebsiteViews = async () =>
   instance.get("/dashboard/analytics/websiteviews");
 
@@ -60,29 +57,8 @@ export const getChartsRadar = async () => instance.get("/pages/charts/radar");
 
 export const getChartsPolar = async () => instance.get("/pages/charts/polar");
 
-export const getAppKanban = async () => instance.get("/applications/kanban");
-
 export const getAppDatatable = async () => instance.get("/applications/datatable");
 
 export const getAppCalendar = async () => instance.get("/applications/calendar");
 
-export const getProductsProductPage = async () => instance.get("/ecommerce/products/productpage");
-
-export const getOrderOrderList = async () => instance.get("/ecommerce/orders/orderlist");
-
-export const register = async (name, email, password, phone, agency, role) =>
-  instance.post("users/register", { name, email, password, phone, agency, role });
-
-export const confirmRegister = async (id) => instance.post(`users/confirm/${id}`);
-
-export const forgotPassword = async (email) => instance.post("users/forgotpassword", { email });
-
-export const confirmReset = async (id, password) =>
-  instance.post(`users/resetpass/${id}`, { password });
-
 export const login = async (email, password) => instance.post("users/login", { email, password });
-
-export const logout = async (token) => instance.post("users/logout", { token });
-
-export const edit = async (userID, name, email) =>
-  instance.post("/users/edit", { userID, name, email });
