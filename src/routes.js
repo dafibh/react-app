@@ -22,9 +22,6 @@
 */
 
 // MD React layouts
-import Sales from "layouts/MD/dashboards/sales";
-import Widgets from "layouts/MD/pages/widgets";
-import Charts from "layouts/MD/pages/charts";
 import DataTables from "layouts/MD/applications/data-tables";
 import Calendar from "layouts/MD/applications/calendar";
 import NewProduct from "layouts/MD/ecommerce/products/new-product";
@@ -95,32 +92,8 @@ const routes = [
     ],
   },
 
-  {
-    type: "collapse",
-    name: "Dashboards",
-    key: "dashboards",
-    icon: <Icon fontSize="medium">dashboard</Icon>,
-    collapse: [
-      {
-        name: "Sales",
-        key: "sales",
-        route: "/dashboards/sales",
-        component: <Sales />,
-      },
-    ],
-  },
   { type: "divider" },
   { type: "title", title: "Pages", key: "title-pages" },
-  {
-    type: "collapse",
-    name: "Pages",
-    key: "pages",
-    icon: <Icon fontSize="medium">image</Icon>,
-    collapse: [
-      { name: "Widgets", key: "widgets", route: "/pages/widgets", component: <Widgets /> },
-      { name: "Charts", key: "charts", route: "/pages/charts", component: <Charts /> },
-    ],
-  },
   {
     type: "collapse",
     name: "Applications",

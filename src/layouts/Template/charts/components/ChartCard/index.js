@@ -25,7 +25,7 @@ import MDBox from "components/MDBase/MDBox";
 import MDTypography from "components/MDBase/MDTypography";
 
 // Chart configurations
-import configs from "layouts/MD/pages/widgets/components/Chart/configs";
+import configs from "layouts/Template/charts/components/ChartCard/configs";
 
 // MD React base styles
 import colors from "assets/theme/base/colors";
