@@ -36,19 +36,6 @@ function DataTables() {
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox pt={6} pb={3}>
-        <MDBox mb={3}>
-          <Card>
-            <MDBox p={3} lineHeight={1}>
-              <MDTypography variant="h5" fontWeight="medium">
-                Datatable Simple
-              </MDTypography>
-              <MDTypography variant="button" color="text">
-                A lightweight, extendable, dependency-free javascript HTML table plugin.
-              </MDTypography>
-            </MDBox>
-            <DataTable table={dataTableData} />
-          </Card>
-        </MDBox>
         <Card>
           <MDBox p={3} lineHeight={1}>
             <MDTypography variant="h5" fontWeight="medium">

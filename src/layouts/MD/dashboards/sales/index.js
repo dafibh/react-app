@@ -26,11 +26,10 @@ import Footer from "components/MDComponents/Footer";
 import DefaultStatisticsCard from "components/MDComponents/Cards/StatisticsCards/DefaultStatisticsCard";
 import DefaultLineChart from "components/MDComponents/Charts/LineCharts/DefaultLineChart";
 import HorizontalBarChart from "components/MDComponents/Charts/BarCharts/HorizontalBarChart";
-import SalesTable from "components/MDComponents/Tables/SalesTable";
 import DataTable from "components/MDComponents/Tables/DataTable";
 
 // Sales dashboard components
-import ChannelsChart from "layouts/MD/dashboards/sales/components/ChannelsChart";
+import ChannelsChart from "layouts/Template/charts/components/ChannelsChart/ChannelsChart";
 
 // Data
 // import defaultLineChartData from "layouts/dashboards/sales/data/defaultLineChartData";
@@ -95,11 +94,11 @@ function Sales() {
   const [revenueDropdownValue, setRevenueDropdownValue] = useState("6 May - 7 May");
 
   // DefaultStatisticsCard state for the dropdown action
-  const [salesDropdown, setSalesDropdown] = useState(null);
   const [customersDropdown, setCustomersDropdown] = useState(null);
   const [revenueDropdown, setRevenueDropdown] = useState(null);
 
   // DefaultStatisticsCard handler for the dropdown action
+  const [salesDropdown, setSalesDropdown] = useState(null);
   const openSalesDropdown = ({ currentTarget }) => setSalesDropdown(currentTarget);
   const closeSalesDropdown = ({ currentTarget }) => {
     setSalesDropdown(null);
@@ -139,52 +138,13 @@ function Sales() {
         <MDBox mb={3}>
           <Grid container spacing={3}>
             <Grid size={{xs:12, sm:4}}>
-              <DefaultStatisticsCard
-                title="sales"
-                count="$230,220"
-                percentage={{
-                  color: "success",
-                  value: "+55%",
-                  label: "since last month",
-                }}
-                dropdown={{
-                  action: openSalesDropdown,
-                  menu: renderMenu(salesDropdown, closeSalesDropdown),
-                  value: salesDropdownValue,
-                }}
-              />
+              removed
             </Grid>
             <Grid size={{xs:12, sm:4}}>
-              <DefaultStatisticsCard
-                title="customers"
-                count="3.200"
-                percentage={{
-                  color: "success",
-                  value: "+12%",
-                  label: "since last month",
-                }}
-                dropdown={{
-                  action: openCustomersDropdown,
-                  menu: renderMenu(customersDropdown, closeCustomersDropdown),
-                  value: customersDropdownValue,
-                }}
-              />
+              removed
             </Grid>
             <Grid size={{xs:12, sm:4}}>
-              <DefaultStatisticsCard
-                title="avg. revenue"
-                count="$1.200"
-                percentage={{
-                  color: "secondary",
-                  value: "+$213",
-                  label: "since last month",
-                }}
-                dropdown={{
-                  action: openRevenueDropdown,
-                  menu: renderMenu(revenueDropdown, closeRevenueDropdown),
-                  value: revenueDropdownValue,
-                }}
-              />
+              removed
             </Grid>
           </Grid>
         </MDBox>
@@ -228,28 +188,13 @@ function Sales() {
               <HorizontalBarChart title="Sales by age" chart={salesByAgeData} />
             </Grid>
             <Grid size={{xs:12, lg:4}}>
-              <SalesTable title="Sales by Country" rows={salesByCountryData} />
+              removed
             </Grid>
           </Grid>
         </MDBox>
         <Grid container spacing={3}>
           <Grid size={{xs:12}}>
-            <Card>
-              <MDBox pt={3} px={3}>
-                <MDTypography variant="h6" fontWeight="medium">
-                  Top Selling Products
-                </MDTypography>
-              </MDBox>
-              <MDBox py={1}>
-                <DataTable
-                  table={dataTableData}
-                  entriesPerPage={false}
-                  showTotalEntries={false}
-                  isSorted={false}
-                  noEndBorder
-                />
-              </MDBox>
-            </Card>
+            removed
           </Grid>
         </Grid>
       </MDBox>

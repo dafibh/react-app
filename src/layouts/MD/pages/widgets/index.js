@@ -22,11 +22,11 @@ import Calendar from "components/MDComponents/Calendar";
 import CategoriesList from "components/MDComponents/Lists/CategoriesList";
 
 // Widgets page components
-import Steps from "layouts/MD/pages/widgets/components/Steps";
-import FullBody from "layouts/MD/pages/widgets/components/FullBody";
-import MediaPlayer from "layouts/MD/pages/widgets/components/MediaPlayer";
-import OrdersOverview from "layouts/MD/pages/widgets/components/OrdersOverview";
-import UpcomingEvents from "layouts/MD/pages/widgets/components/UpcomingEvents";
+import Steps from "layouts/Template/cards/components/Steps/Steps";
+import FullBody from "layouts/Template/cards/components/FullBody/FullBody";
+import MediaPlayer from "layouts/Template/cards/components/MediaPlayer/MediaPlayer";
+import OrdersOverview from "layouts/Template/cards/components/OrdersOverview/OrdersOverview";
+import UpcomingEvents from "layouts/Template/cards/components/UpcomingEvents/UpcomingEvents";
 import Chart from "layouts/MD/pages/widgets/components/Chart";
 
 // Data
@@ -44,16 +44,12 @@ import {
 } from "util/APIHelper";
 
 function Widgets() {
-  const [lights, setLights] = useState(false);
   const [progressLineChartData, setProgressLineChartData] = useState({});
   const [calendarEventsData, setCalendarEventsData] = useState([]);
-  const [categoriesListData, setCategoriesListData] = useState([]);
   const [caloriesChartData, setCaloriesChartData] = useState({
     labels: [],
     datasets: [],
   });
-
-  const handleSetLights = () => setLights(!lights);
 
   useEffect(() => {
     const runAsync = async () => {
@@ -63,27 +59,6 @@ function Widgets() {
       setCalendarEventsData(calendarEventsDataResponse.data.message);
       const caloriesChartDataResponse = await getWidgetsCalories();
       setCaloriesChartData(caloriesChartDataResponse.data.message);
-
-      const categoriesListDataResponse = await getWidgetsCategories();
-      const categoriesListDataContent = categoriesListDataResponse.data.message.map((content) => ({
-        color: content.color,
-        icon: content.icon,
-        name: content.name,
-        description: (
-          <>
-            {content.description.content}
-            <MDTypography
-              variant={content.description.typography.variant}
-              color={content.description.typography.color}
-              fontWeight={content.description.typography.fontWeight}
-            >
-              {content.description.typography.content}
-            </MDTypography>
-          </>
-        ),
-        route: content.route,
-      }));
-      setCategoriesListData(categoriesListDataContent);
     };
     runAsync();
   }, []);
@@ -95,7 +70,7 @@ function Widgets() {
         <MDBox mb={3}>
           <Grid container spacing={3}>
             <Grid size={{xs:12, sm:6, lg:4}}>
-              <UpcomingEvents />
+              removed
             </Grid>
             <Grid size={{xs:12, lg:8}}>
               <ProgressLineChart
@@ -112,20 +87,6 @@ function Widgets() {
         <MDBox mb={3}>
           <Grid container spacing={3}>
             <Grid size={{xs:12, md:6, lg:3}}>
-              <MDBox mb={3}>
-                <MiniStatisticsCard
-                  title={{ text: "battery health" }}
-                  count="99 %"
-                  icon={{ color: "info", component: "battery_charging_full" }}
-                  direction="left"
-                />
-              </MDBox>
-              <MiniStatisticsCard
-                title={{ text: "music volume" }}
-                count="15/100"
-                icon={{ color: "info", component: "volume_down" }}
-                direction="left"
-              />
             </Grid>
             <Grid
               item
@@ -133,44 +94,20 @@ function Widgets() {
               display="flex"
               flexDirection={{ xs: "column", sm: "row" }}
             >
-              <MDBox width="100%" mr={{ xs: 0, sm: 3 }} mb={{ xs: 3, sm: 0 }}>
-                <DefaultInfoCard
-                  icon="account_balance"
-                  title="salary"
-                  description="Belong Interactive"
-                  value="+$2000"
-                />
-              </MDBox>
-              <MDBox width="100%">
-                <DefaultInfoCard
-                  icon="paypal"
-                  title="paypal"
-                  description="Freelance Payment"
-                  value="$455.00"
-                />
-              </MDBox>
+              removed
             </Grid>
             <Grid size={{xs:12, lg:4}}>
-              <MasterCard number={4562112245947852} holder="jack peterson" expires="11/22" />
+              removed
             </Grid>
           </Grid>
         </MDBox>
         <MDBox mb={3}>
           <Grid container spacing={3}>
             <Grid size={{xs:12, md:6, lg:3}}>
-              <FullBody />
+              removed
             </Grid>
             <Grid size={{xs:12, md:6, lg:2}}>
-              <ControllerCard
-                state={lights}
-                icon={
-                  <Icon className={lights ? "text-white" : "text-dark"} fontSize="large">
-                    lightbulb
-                  </Icon>
-                }
-                title="Lights"
-                onChange={handleSetLights}
-              />
+              removed
             </Grid>
             <Grid size={{xs:12, lg:3}}>
               <Chart
@@ -181,49 +118,25 @@ function Widgets() {
               />
             </Grid>
             <Grid size={{xs:12, md:6, lg:2}}>
-              <MiniInfoCard
-                icon="shortcut"
-                title={
-                  <>
-                    754&nbsp;
-                    <MDTypography variant="button" color="secondary" fontWeight="medium">
-                      m
-                    </MDTypography>
-                  </>
-                }
-                description="New York City"
-              />
+              removed
             </Grid>
             <Grid size={{xs:12, md:6, lg:2}}>
-              <Steps />
+              removed
             </Grid>
           </Grid>
         </MDBox>
         <Grid container spacing={3}>
           <Grid size={{xs:12, lg:5}}>
-            {useMemo(
-              () => (
-                <Calendar
-                  header={{ title: "calendar", date: "Monday, 2021" }}
-                  headerToolbar={false}
-                  initialView="dayGridMonth"
-                  initialDate="2021-08-10"
-                  events={calendarEventsData}
-                  selectable
-                  editable
-                />
-              ),
-              [calendarEventsData]
-            )}
+            removed
           </Grid>
           <Grid size={{xs:12, lg:3}}>
             <MDBox mb={3}>
-              <CategoriesList title="categories" categories={categoriesListData} />
+              removed
             </MDBox>
-            <MediaPlayer />
+            removed
           </Grid>
           <Grid size={{xs:12, lg:4}}>
-            <OrdersOverview />
+            removed
           </Grid>
         </Grid>
       </MDBox>

@@ -55,7 +55,7 @@ function Chart({ title, count, percentage, chart }) {
       borderWidth: 2,
       maxBarThickness: 6,
       borderColor: colors.info.main,
-      backgroundColor: "rgba(74, 163, 241, 0.1)",
+      backgroundColor: "rgba(74, 163, 241, 0.2)",
     }));
 
     setChartData(configs(chart.labels, chartDatasets));
@@ -67,25 +67,27 @@ function Chart({ title, count, percentage, chart }) {
         overflow: "hidden",
       }}
     >
-      <MDBox p={2} lineHeight={1}>
-        <MDTypography variant="button" textTransform="capitalize" fontWeight="medium" color="text">
-          {title}
-        </MDTypography>
-        <MDTypography variant="h5" fontWeight="bold" color="dark">
-          {count}&nbsp;
-          <MDTypography variant="button" fontWeight="bold" color={percentage.color}>
-            {percentage.label}
+      <MDBox bgColor="dark">
+        <MDBox p={2} lineHeight={1} >
+          <MDTypography variant="button" textTransform="capitalize" fontWeight="medium" color="text">
+            {title}
           </MDTypography>
-        </MDTypography>
+          <MDTypography variant="h5" fontWeight="bold" color="dark">
+            {count}&nbsp;
+            <MDTypography variant="button" fontWeight="bold" color={percentage.color}>
+              {percentage.label}
+            </MDTypography>
+          </MDTypography>
+        </MDBox>
+        {useMemo(
+          () => (
+            <MDBox ref={chartRef} sx={{ height: "5.375rem", transform: "scale(1.02)" }}>
+              {data && <Line data={data} options={options} />}
+            </MDBox>
+          ),
+          [chartData]
+        )}
       </MDBox>
-      {useMemo(
-        () => (
-          <MDBox ref={chartRef} sx={{ height: "5.375rem", transform: "scale(1.02)" }}>
-            {data && <Line data={data} options={options} />}
-          </MDBox>
-        ),
-        [chartData]
-      )}
     </Card>
   );
 }

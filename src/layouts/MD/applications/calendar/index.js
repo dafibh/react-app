@@ -39,7 +39,7 @@ function Calendar() {
       <DashboardNavbar />
       <MDBox pt={3}>
         <MDBox display="flex" justifyContent="flex-end" mt={1} mb={4} mx={2}>
-          <Header />
+          removed
         </MDBox>
         <Grid container spacing={3}>
           <Grid size={{xs:12, xl:9}} sx={{ height: "max-content" }}>
@@ -58,10 +58,10 @@ function Calendar() {
           </Grid>
           <Grid size={{xs:12, xl:3}}>
             <MDBox mb={3}>
-              <NextEvents />
+              removed
             </MDBox>
             <MDBox mb={3}>
-              <ProductivityChart />
+              removed
             </MDBox>
           </Grid>
         </Grid>

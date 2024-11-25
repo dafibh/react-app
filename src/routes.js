@@ -22,13 +22,7 @@
 */
 
 // MD React layouts
-import Analytics from "layouts/MD/dashboards/analytics";
 import Sales from "layouts/MD/dashboards/sales";
-import ProfileOverview from "layouts/MD/pages/profile/profile-overview";
-import AllProjects from "layouts/MD/pages/profile/all-projects";
-import Settings from "layouts/MD/pages/account/settings";
-import Billing from "layouts/MD/pages/account/billing";
-import Timeline from "layouts/MD/pages/projects/timeline";
 import Widgets from "layouts/MD/pages/widgets";
 import Charts from "layouts/MD/pages/charts";
 import DataTables from "layouts/MD/applications/data-tables";
@@ -40,23 +34,73 @@ import SignInCover from "layouts/MD/authentication/sign-in/cover";
 import SignInIllustration from "layouts/MD/authentication/sign-in/illustration";
 import SignUpCover from "layouts/MD/authentication/sign-up/cover";
 import ResetCover from "layouts/MD/authentication/reset-password/cover";
+import CardsExample from "layouts/Template/cards";
+import ChartsExample from "layouts/Template/charts"
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import ComponentsExample from "./layouts/Template/components";
+import ReactTableExample from "./layouts/Template/datatables/react-table";
+import MRTExample from "./layouts/Template/datatables/mrt";
 
 const routes = [
+  {
+    type: "collapse",
+    name: "Cards",
+    key: "cards",
+    route: "/cards",
+    noCollapse: true,
+    icon: <Icon fontSize="medium">dashboard</Icon>,
+    component: <CardsExample />
+  },
+
+  {
+    type: "collapse",
+    name: "Components",
+    key: "components",
+    route: "/components",
+    noCollapse: true,
+    icon: <Icon fontSize="medium">settings</Icon>,
+    component: <ComponentsExample />
+  },
+
+  {
+    type: "collapse",
+    name: "Charts",
+    key: "charts",
+    route: "/charts",
+    noCollapse: true,
+    icon: <Icon fontSize="medium">bar_chart</Icon>,
+    component: <ChartsExample />
+  },
+
+  {
+    type: "collapse",
+    name: "Datatables",
+    key: "datatables",
+    icon: <Icon fontSize="medium">table_chart</Icon>,
+    collapse: [
+      {
+        name: "React Table",
+        key: "react-table",
+        route: "/datatables/react-table",
+        component: <ReactTableExample />,
+      },
+      {
+        name: "MRT",
+        key: "mrt",
+        route: "/datatables/mrt",
+        component: <MRTExample />,
+      },
+    ],
+  },
+
   {
     type: "collapse",
     name: "Dashboards",
     key: "dashboards",
     icon: <Icon fontSize="medium">dashboard</Icon>,
     collapse: [
-      {
-        name: "Analytics",
-        key: "analytics",
-        route: "/dashboards/analytics",
-        component: <Analytics />,
-      },
       {
         name: "Sales",
         key: "sales",
@@ -65,6 +109,7 @@ const routes = [
       },
     ],
   },
+  { type: "divider" },
   { type: "title", title: "Pages", key: "title-pages" },
   {
     type: "collapse",
@@ -72,54 +117,6 @@ const routes = [
     key: "pages",
     icon: <Icon fontSize="medium">image</Icon>,
     collapse: [
-      {
-        name: "Profile",
-        key: "profile",
-        collapse: [
-          {
-            name: "Profile Overview",
-            key: "profile-overview",
-            route: "/pages/profile/profile-overview",
-            component: <ProfileOverview />,
-          },
-          {
-            name: "All Projects",
-            key: "all-projects",
-            route: "/pages/profile/all-projects",
-            component: <AllProjects />,
-          },
-        ],
-      },
-      {
-        name: "Account",
-        key: "account",
-        collapse: [
-          {
-            name: "Settings",
-            key: "settings",
-            route: "/pages/account/settings",
-            component: <Settings />,
-          },
-          {
-            name: "Billing",
-            key: "billing",
-            route: "/pages/account/billing",
-            component: <Billing />,
-          },
-        ],
-      },
-      {
-        name: "Projects",
-        key: "projects",
-        collapse: [
-          {
-            name: "Timeline",
-            key: "timeline",
-            route: "/pages/projects/timeline",
-            component: <Timeline />,
-          },
-        ],
-      },
       { name: "Widgets", key: "widgets", route: "/pages/widgets", component: <Widgets /> },
       { name: "Charts", key: "charts", route: "/pages/charts", component: <Charts /> },
     ],
